@@ -10,7 +10,8 @@
 <body>
   <header class="site-header">
     <a class="logo" href="index.html">RF Rénovation</a>
-    <nav aria-label="Navigation principale">
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav id="menu" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <div class="has-submenu">
         <a href="services/index.html">Services</a>
@@ -24,8 +25,63 @@
   </header>
 
   <main>
-    <h1>Espaces verts et toiture autour de Pau</h1>
-    <!-- TODO : contenu -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Pau et alentours · 64 · 65 · 40</p>
+        <h1>Votre jardin et votre toiture entre de bonnes mains</h1>
+        <p class="lead">RF Rénovation réalise vos travaux d'espaces verts et de toiture. Un seul interlocuteur, un travail soigné, un devis clair.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="contact.html">Demander un devis</a>
+          <a class="btn btn-ghost" href="tel:+33500000000">Appeler : 05 00 00 00 00</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="activites">
+      <div class="container">
+        <h2>Nos deux savoir-faire</h2>
+        <div class="cards">
+          <article class="card card-vert">
+            <div class="card-icon" aria-hidden="true">🌿</div>
+            <h3>Espaces verts</h3>
+            <p>Entretien, tonte, taille, plantation, aménagement de votre extérieur toute l'année.</p>
+            <a class="link" href="services/espaces-verts.html">Découvrir les espaces verts →</a>
+          </article>
+          <article class="card card-toit">
+            <div class="card-icon" aria-hidden="true">🏠</div>
+            <h3>Toiture</h3>
+            <p>Réparation, rénovation, nettoyage et entretien de votre toiture pour la protéger durablement.</p>
+            <a class="link" href="services/toitures.html">Découvrir la toiture →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Pourquoi choisir RF Rénovation</h2>
+        <ul class="features">
+          <li><strong>Un seul interlocuteur</strong><span>Jardin et toiture gérés par la même entreprise.</span></li>
+          <li><strong>Devis clair</strong><span>Un chiffrage détaillé avant le début des travaux.</span></li>
+          <li><strong>Proximité</strong><span>Basés à Pau, nous intervenons rapidement près de chez vous.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="zone">
+      <div class="container">
+        <h2>Zone d'intervention</h2>
+        <p>Depuis Pau, nous intervenons dans les <strong>Pyrénées-Atlantiques (64)</strong>, les <strong>Hautes-Pyrénées (65)</strong> et les <strong>Landes (40)</strong>.</p>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <h2>Un projet ? Parlons-en.</h2>
+        <p>Décrivez-nous vos travaux, nous revenons vers vous rapidement.</p>
+        <a class="btn btn-light" href="contact.html">Demander un devis</a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

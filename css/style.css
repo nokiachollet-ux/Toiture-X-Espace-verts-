@@ -1,10 +1,62 @@
-/* Styles RF Rénovation – à compléter */
-:root { --vert: #2f6b3a; --ardoise: #3b4651; --terre: #b5542f; --fond: #fafaf7; }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, sans-serif; background: var(--fond); color: #222; }
+/* RF Rénovation */
+:root { --vert:#2f6b3a; --vert-clair:#e6f0e8; --ardoise:#3b4651; --terre:#b5542f; --terre-clair:#f6e9e3; --fond:#fafaf7; --texte:#222; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:var(--fond); color:var(--texte); line-height:1.6; }
+.container { width:min(1100px,100% - 2rem); margin-inline:auto; }
+h1,h2,h3 { line-height:1.2; margin:0 0 .75rem; }
+h1 { font-size:clamp(2rem,5vw,3.2rem); }
+h2 { font-size:clamp(1.5rem,3.5vw,2.1rem); }
+a { color:inherit; }
 
-/* Navigation : Accueil > Services (sous-menu) > Contact */
-nav { display: flex; gap: 1.5rem; align-items: center; }
-.has-submenu { position: relative; }
-.submenu { display: none; position: absolute; top: 100%; left: 0; margin: 0; padding: .5rem 1rem; list-style: none; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
-.has-submenu:hover .submenu, .has-submenu:focus-within .submenu { display: block; }
+/* Header + nav */
+.site-header { position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; padding:.8rem max(1rem,calc((100% - 1100px)/2)); background:#fff; box-shadow:0 1px 4px rgba(0,0,0,.1); }
+.logo { font-weight:700; font-size:1.2rem; text-decoration:none; color:var(--vert); }
+nav { display:flex; gap:1.5rem; align-items:center; }
+nav a { text-decoration:none; font-weight:500; }
+nav a:hover { color:var(--vert); }
+.has-submenu { position:relative; }
+.submenu { display:none; position:absolute; top:100%; left:0; margin:0; padding:.5rem 1rem; list-style:none; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.15); white-space:nowrap; }
+.submenu li { padding:.25rem 0; }
+.has-submenu:hover .submenu, .has-submenu:focus-within .submenu { display:block; }
+.nav-toggle { display:none; background:none; border:0; font-size:1.8rem; cursor:pointer; }
+@media (max-width:760px) {
+  .nav-toggle { display:block; }
+  nav { display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; align-items:stretch; gap:0; background:#fff; padding:.5rem 1rem 1rem; box-shadow:0 4px 8px rgba(0,0,0,.1); }
+  nav.open { display:flex; }
+  nav a { display:block; padding:.6rem 0; }
+  .submenu { display:block; position:static; box-shadow:none; padding:0 0 0 1rem; }
+}
+
+/* Boutons */
+.btn { display:inline-block; padding:.85rem 1.5rem; border-radius:999px; font-weight:600; text-decoration:none; border:2px solid transparent; }
+.btn-primary { background:var(--terre); color:#fff; }
+.btn-primary:hover { background:#9a4524; }
+.btn-ghost { border-color:#fff; color:#fff; }
+.btn-ghost:hover { background:rgba(255,255,255,.15); }
+.btn-light { background:#fff; color:var(--vert); }
+.cta-row { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.5rem; }
+
+/* Hero */
+.hero { background:linear-gradient(135deg,var(--vert) 0%,var(--ardoise) 100%); color:#fff; padding:clamp(3rem,10vw,6rem) 0; }
+.eyebrow { text-transform:uppercase; letter-spacing:.08em; font-size:.85rem; opacity:.85; margin:0 0 .75rem; }
+.lead { font-size:1.15rem; max-width:40rem; opacity:.95; }
+
+/* Sections */
+.section { padding:clamp(2.5rem,7vw,4.5rem) 0; }
+.section-alt { background:#fff; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; margin-top:1.5rem; }
+.card { padding:2rem; border-radius:14px; border-top:5px solid; }
+.card-vert { background:var(--vert-clair); border-color:var(--vert); }
+.card-toit { background:var(--terre-clair); border-color:var(--terre); }
+.card-icon { font-size:2.2rem; }
+.link { font-weight:600; text-decoration:none; }
+.card-vert .link { color:var(--vert); }
+.card-toit .link { color:var(--terre); }
+.features { list-style:none; margin:1.5rem 0 0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.5rem; }
+.features li { display:flex; flex-direction:column; gap:.3rem; padding-left:1rem; border-left:4px solid var(--vert); }
+.cta-band { background:var(--ardoise); color:#fff; text-align:center; padding:3rem 0; }
+
+/* Footer */
+.site-footer { background:#1f262d; color:#cfd6dc; padding:1.5rem 1rem; text-align:center; font-size:.9rem; }
+.site-footer p { margin:.25rem 0; }
+main > h1:only-child { width:min(1100px,100% - 2rem); margin:2rem auto; }
