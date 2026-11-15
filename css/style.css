@@ -2,3 +2,9 @@
 :root { --vert: #2f6b3a; --ardoise: #3b4651; --terre: #b5542f; --fond: #fafaf7; }
 * { box-sizing: border-box; }
 body { margin: 0; font-family: system-ui, sans-serif; background: var(--fond); color: #222; }
+
+/* Navigation : Accueil > Services (sous-menu) > Contact */
+nav { display: flex; gap: 1.5rem; align-items: center; }
+.has-submenu { position: relative; }
+.submenu { display: none; position: absolute; top: 100%; left: 0; margin: 0; padding: .5rem 1rem; list-style: none; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+.has-submenu:hover .submenu, .has-submenu:focus-within .submenu { display: block; }
