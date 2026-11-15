@@ -31,10 +31,6 @@ a { color:inherit; }
 nav { display:flex; gap:2rem; align-items:center; margin-left:auto; }
 nav a { text-decoration:none; font-size:.92rem; color:var(--ink); padding:.4rem 0; border-bottom:1px solid transparent; transition:color .2s,border-color .2s; }
 nav a:hover { color:var(--terra); border-color:var(--terra); }
-.has-submenu { position:relative; }
-.submenu { display:none; position:absolute; top:100%; left:-1.1rem; min-width:12rem; margin:0; padding:.7rem 1.1rem; list-style:none; background:var(--card); border:1px solid var(--line); border-radius:4px; box-shadow:0 12px 30px -18px rgba(30,38,34,.35); }
-.submenu li { padding:.15rem 0; }
-.has-submenu:hover .submenu, .has-submenu:focus-within .submenu { display:block; }
 .header-cta { display:flex; align-items:center; gap:1.4rem; }
 .header-tel { font-size:.92rem; font-weight:500; text-decoration:none; white-space:nowrap; }
 .header-tel:hover { color:var(--terra); }
@@ -48,7 +44,6 @@ nav a:hover { color:var(--terra); border-color:var(--terra); }
   nav { display:none; position:absolute; top:100%; left:0; right:0; margin:0; flex-direction:column; align-items:stretch; gap:0; background:var(--paper); padding:.3rem 1.5rem 1rem; border-bottom:1px solid var(--line); }
   nav.open { display:flex; }
   nav a { display:block; padding:.85rem 0; border-bottom:1px solid var(--line); }
-  .submenu { display:block; position:static; border:0; box-shadow:none; background:none; padding:0 0 0 1rem; }
 }
 
 /* Boutons et liens */
