@@ -12,7 +12,7 @@ HTML, CSS et JavaScript vanilla uniquement. Pas de bundler, de linter ni de test
 
 - Prévisualiser : `python3 -m http.server` à la racine, puis ouvrir `localhost:8000`. Ouvrir les fichiers en `file://` fonctionne aussi (liens tous relatifs).
 - Vérification visuelle : Playwright est préinstallé (`require('playwright')`, `chromium.launch()` sans option). Charger les pages en `file://`, tester à 1280 px et 390 px de large, et contrôler `document.documentElement.scrollWidth - clientWidth === 0` (aucun défilement horizontal).
-- Déploiement : un push sur `main` lance `.github/workflows/pages.yml` (GitHub Pages). Le premier run échoue tant que la source de Pages n'est pas réglée sur « GitHub Actions » dans les réglages du dépôt. Développer sur la branche de session et ne pousser sur `main` qu'avec l'accord de l'utilisateur.
+- Déploiement : un push sur `main` lance `.github/workflows/static.yml` (GitHub Pages). Développer sur la branche de session et ne pousser sur `main` qu'avec l'accord de l'utilisateur.
 
 ## Architecture
 
