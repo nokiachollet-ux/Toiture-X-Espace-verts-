@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Projet
 
-Site vitrine statique, en français, pour le client **RF Rénovation** (travaux d'espaces verts et de toiture, basé à Pau, zone d'intervention 64-65-40). Objectif : être visible en ligne et attirer de nouveaux clients, avec les deux activités sur le site. Plan de site : Accueil > Espaces verts > Toitures > Contact, plus Mentions légales (pas de page « Services » intermédiaire : le menu pointe directement vers les deux activités).
+Site vitrine statique, en français, pour le client **RF Rénovation** (travaux d'espaces verts et de toiture, basé à Pau, zone d'intervention 64-65-40). Objectif : être visible en ligne et attirer de nouveaux clients, avec les deux activités sur le site. Pages : Accueil, Espaces verts, Toitures, Contact, plus Mentions légales (pas de page « Services » intermédiaire : le menu pointe directement vers les deux activités).
 
 HTML, CSS et JavaScript vanilla uniquement. Pas de bundler, de linter ni de tests automatisés.
 
@@ -16,11 +16,11 @@ HTML, CSS et JavaScript vanilla uniquement. Pas de bundler, de linter ni de test
 
 ## Architecture
 
-Cinq pages : `index.html`, `contact.html`, `mentions-legales.html`, `services/espaces-verts.html`, `services/toitures.html`. Un seul `css/style.css` et un seul `js/main.js`.
+Pages : `index.html`, `contact.html`, `mentions-legales.html`, `services/espaces-verts.html`, `services/toitures.html`. Un seul `css/style.css` et un seul `js/main.js`.
 
 Points à connaître avant de modifier :
 
-- **Pas de templating.** L'en-tête, le pied de page, la barre mobile « Appeler / Demander un devis » et le sprite SVG d'icônes (`#i-leaf`, `#i-roof`, `#i-team`, `#i-phone`, placé en début de `<main>`) sont dupliqués dans chaque page. Toute modification de l'un d'eux doit être reportée sur les cinq fichiers.
+- **Pas de templating.** L'en-tête, le pied de page, la barre mobile « Appeler / Demander un devis » et le sprite SVG d'icônes (`#i-leaf`, `#i-roof`, `#i-team`, `#i-phone`, placé en début de `<main>`) sont dupliqués dans chaque page. Toute modification de l'un d'eux doit être reportée sur toutes les pages.
 - **Chemins relatifs uniquement.** Les pages de `services/` préfixent leurs liens par `../`. Ne jamais utiliser de chemin absolu (`/css/...`) : le site est servi sous `/Toiture-X-Espace-verts-/` sur GitHub Pages.
 - **Liens vers le devis.** Sur l'accueil le bouton pointe vers `#contact` (formulaire de la page). Sur les pages d'activité (`services/`), il pointe vers `../contact.html#espaces-verts` ou `#toiture`. `js/main.js` lit ce hash pour présélectionner `#f-type` : les `value` des `<option>` (`espaces-verts`, `toiture`, `les-deux`) doivent rester alignées avec ces ancres.
 - **Emplacements photo.** Chaque image est un `<figure class="photo photo-garden|photo-roof">` avec un visuel provisoire (icône + légende « Photo à venir »). Pour une vraie photo, ajouter un `<img>` dans la figure : `.photo img` le fait recouvrir l'emplacement (`object-fit:cover`). Les figures de la galerie portent `data-cat="garden|roof"`, utilisé par le filtre.
