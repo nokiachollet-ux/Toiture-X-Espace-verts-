@@ -19,3 +19,20 @@ if ('IntersectionObserver' in window) {
 } else {
   items.forEach((el) => el.classList.add('in'));
 }
+
+// Parallaxe douce des crêtes et du soleil
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const layers = document.querySelectorAll('.ridge[data-speed]');
+  const sun = document.querySelector('.sun');
+  const hero = document.querySelector('.hero');
+  if (!hero || !layers.length) return;
+  let ticking = false;
+  function update() {
+    const y = Math.min(window.scrollY, hero.offsetHeight);
+    layers.forEach((l) => { l.style.transform = 'translateY(' + (y * l.dataset.speed) + 'px)'; });
+    if (sun) sun.style.transform = 'translateY(' + (y * 0.3) + 'px)';
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+})();
