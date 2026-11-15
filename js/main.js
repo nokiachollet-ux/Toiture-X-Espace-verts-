@@ -38,10 +38,21 @@ chips.forEach((chip) => {
 const form = document.getElementById('devis-form');
 const statusEl = document.getElementById('form-status');
 if (form && statusEl) {
+  // Présélection du type de travaux selon la page d'où vient le visiteur (contact.html#toiture)
+  const preselect = () => {
+    const wanted = location.hash.replace('#', '');
+    if ([...form.type.options].some((o) => o.value && o.value === wanted)) form.type.value = wanted;
+  };
+  preselect();
+  window.addEventListener('hashchange', preselect);
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (!form.nom.value.trim() || !form.tel.value.trim()) {
-      statusEl.textContent = 'Indiquez votre nom et votre téléphone pour être rappelé.';
+    const missing = [form.nom, form.tel, form.type].filter((f) => !f.value.trim());
+    [form.nom, form.tel, form.type].forEach((f) => f.setAttribute('aria-invalid', String(missing.includes(f))));
+    if (missing.length) {
+      statusEl.textContent = 'Indiquez votre nom, votre téléphone et le type de travaux pour être rappelé.';
+      missing[0].focus();
       return;
     }
     statusEl.textContent = "Maquette : l'envoi du formulaire sera activé à la mise en ligne du site.";

@@ -49,6 +49,10 @@
             <a class="btn btn-primary" href="#contact">Demander un devis</a>
             <a class="tel-link" href="tel:+33500000000"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>05 00 00 00 00</a>
           </div>
+          <p class="needs"><span class="needs-label">Votre besoin</span>
+            <a class="need need-garden" href="services/espaces-verts.html">Espaces verts <span aria-hidden="true">→</span></a>
+            <a class="need need-roof" href="services/toitures.html">Toiture <span aria-hidden="true">→</span></a>
+          </p>
           <ul class="assure">
             <li>Un seul interlocuteur</li>
             <li>Devis détaillé avant travaux</li>
@@ -149,6 +153,22 @@
             <li><span>65</span>Hautes-Pyrénées</li>
             <li><span>40</span>Landes</li>
           </ul>
+          <p class="towns">Nous intervenons notamment à Pau, Lescar, Billère, Lons, Orthez, Oloron-Sainte-Marie, Tarbes, Lourdes, Mont-de-Marsan et Aire-sur-l'Adour. Votre commune n'est pas citée ? Appelez-nous pour le vérifier.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="questions">
+      <div class="container faq">
+        <header class="reveal">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2>Avant de nous appeler</h2>
+        </header>
+        <div class="faq-list reveal">
+          <details class="faq-item"><summary>Intervenez-vous dans ma commune ?</summary><p>Nous sommes basés à Pau et nous nous déplaçons dans les Pyrénées-Atlantiques, les Hautes-Pyrénées et les Landes. En cas de doute, un appel suffit pour le vérifier.</p></details>
+          <details class="faq-item"><summary>Puis-je vous confier à la fois le jardin et la toiture ?</summary><p>Oui, ce sont nos deux métiers. Vous gardez le même interlocuteur pour les deux, avec un devis par chantier.</p></details>
+          <details class="faq-item"><summary>Comment se passe un devis ?</summary><p>Vous nous décrivez votre besoin, nous venons voir sur place, puis vous recevez un devis détaillé poste par poste. Vous décidez ensuite.</p></details>
+          <details class="faq-item"><summary>Quel est le moyen le plus rapide de vous joindre ?</summary><p>Le téléphone, au 05 00 00 00 00. Vous pouvez aussi remplir le formulaire ci-dessous, nous vous rappelons.</p></details>
         </div>
       </div>
     </section>
@@ -165,10 +185,18 @@
         <form class="contact-form" id="devis-form" novalidate>
           <div class="field"><label for="f-nom">Nom</label><input id="f-nom" name="nom" type="text" autocomplete="name" required></div>
           <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="f-commune">Commune</label><input id="f-commune" name="commune" type="text" autocomplete="address-level2" placeholder="Ex. Pau, Tarbes, Aire-sur-l'Adour"></div>
+          <div class="field"><label for="f-email">E-mail <span class="optional">(facultatif)</span></label><input id="f-email" name="email" type="email" autocomplete="email"></div>
           <div class="field field-full"><label for="f-type">Type de travaux</label>
-            <select id="f-type" name="type"><option>Espaces verts</option><option>Toiture</option><option>Les deux</option></select></div>
-          <div class="field field-full"><label for="f-msg">Votre projet</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+            <select id="f-type" name="type" required>
+              <option value="">Choisir…</option>
+              <option value="espaces-verts">Espaces verts</option>
+              <option value="toiture">Toiture</option>
+              <option value="les-deux">Les deux</option>
+            </select></div>
+          <div class="field field-full"><label for="f-msg">Votre projet <span class="optional">(facultatif)</span></label><textarea id="f-msg" name="message" rows="4" placeholder="Ex. haie de 20 m à tailler, fuite au niveau de la cheminée…"></textarea></div>
           <button class="btn btn-primary field-full" type="submit">Envoyer ma demande</button>
+          <p class="form-note field-full">Vos coordonnées servent uniquement à vous recontacter au sujet de votre demande.</p>
           <p class="form-status field-full" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
