@@ -13,7 +13,7 @@
 <body>
   <header class="site-header">
     <a class="logo" href="../index.html"><span class="logo-mark">RF</span><span class="logo-name">Rénovation</span></a>
-    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"></button>
     <nav id="menu" aria-label="Navigation principale">
       <a href="../index.html">Accueil</a>
       <div class="has-submenu">
@@ -25,6 +25,10 @@
       </div>
       <a href="../contact.html">Contact</a>
     </nav>
+    <div class="header-cta">
+      <a class="header-tel" href="tel:+33500000000">05 00 00 00 00</a>
+      <a class="btn btn-primary btn-sm" href="../contact.html">Demander un devis</a>
+    </div>
   </header>
 
   <main>
@@ -33,9 +37,41 @@
   </main>
 
   <footer class="site-footer">
-    <p>RF Rénovation – Pau – Intervention : Pyrénées-Atlantiques (64), Hautes-Pyrénées (65), Landes (40)</p>
-    <p><a href="../mentions-legales.html">Mentions légales</a></p>
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-logo">RF Rénovation</p>
+        <p>Espaces verts et toiture.<br>Basé à Pau.</p>
+      </div>
+      <div>
+        <p class="footer-title">Le site</p>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="../services/espaces-verts.html">Espaces verts</a></li>
+          <li><a href="../services/toitures.html">Toitures</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Zone d'intervention</p>
+        <ul>
+          <li>Pyrénées-Atlantiques (64)</li>
+          <li>Hautes-Pyrénées (65)</li>
+          <li>Landes (40)</li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Contact</p>
+        <ul>
+          <li><a href="tel:+33500000000">05 00 00 00 00</a></li>
+          <li><a href="../mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
   </footer>
+  <div class="mobile-bar">
+    <a href="tel:+33500000000">Appeler</a>
+    <a href="../contact.html" class="mb-primary">Demander un devis</a>
+  </div>
   <script src="../js/main.js"></script>
 </body>
 </html>
