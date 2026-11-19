@@ -24,9 +24,9 @@
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); burger.focus(); } });
   }
 
-  /* ---------- Navigation locale : filet au défilement ---------- */
-  const lnav = $('#lnav');
-  const onScroll = () => lnav && lnav.classList.toggle('is-stuck', window.scrollY > 48);
+  /* ---------- En-tête collant : filet au défilement ---------- */
+  const gnavEl = $('#gnav');
+  const onScroll = () => gnavEl && gnavEl.classList.toggle('is-stuck', window.scrollY > 4);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
@@ -142,7 +142,8 @@
 
   /* Entrée de page */
   const intro = gsap.timeline({ defaults: { ease: E } });
-  intro.from('.gnav, .lnav', { y: -14, opacity: 0, duration: .8, stagger: .08 });
+  // clearProps : aucune transformation ne doit rester sur l'en-tête collant
+  intro.from('.gnav-in, .lnav-in', { y: -14, opacity: 0, duration: .8, stagger: .08, clearProps: 'transform,opacity' });
   if (has('.hero')) {
     // Accueil : titre révélé ligne à ligne, puis le toit se couvre rang par rang
     intro
@@ -221,7 +222,7 @@
       });
     }
     if (has('.anatomy')) {
-      ScrollTrigger.create({ trigger: '.anatomy', start: 'top top+=52', end: '+=1300', pin: true, scrub: .6, animation: anatomyTl() });
+      ScrollTrigger.create({ trigger: '.anatomy', start: 'top top', end: '+=1300', pin: true, scrub: .6, animation: anatomyTl() });
     }
     return () => { if (vp) vp.classList.remove('is-pinned'); pinnedST = null; };
   });
