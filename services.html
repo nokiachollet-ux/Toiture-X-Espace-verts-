@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Services de toiture à Pau | RF Rénovation</title>
+  <meta name="description" content="Couverture ardoise et tuile, réparation de fuites, démoussage, zinguerie, fenêtres de toit et isolation : les prestations de RF Rénovation, couvreur à Pau.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="gnav">
+  <div class="wrap gnav-in">
+    <a class="brand" href="index.html" aria-label="RF Rénovation, accueil">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12.5 12 4l9.5 8.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10.5V20h12v-9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      RF Rénovation
+    </a>
+    <nav class="gnav-links" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="gnav-tel" href="tel:+33500000000">05 00 00 00 00</a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span></button>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <div class="menu-top">
+      <span class="brand">RF Rénovation</span>
+      <button class="menu-close" type="button" aria-label="Fermer le menu">×</button>
+    </div>
+    <nav aria-label="Menu mobile">
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-foot">
+      <a class="tel" href="tel:+33500000000">05 00 00 00 00</a>
+      <a class="pill pill-blue pill-lg" href="contact.html">Demander un devis</a>
+    </div>
+  </div>
+</header>
+
+<div class="lnav" id="lnav">
+  <div class="wrap lnav-in">
+    <a class="lnav-title" href="#top">Services</a>
+    <nav class="lnav-links" aria-label="Sur cette page">
+      <a href="#couverture">Couverture</a>
+      <a href="#reparation">Réparation</a>
+      <a href="#entretien">Entretien</a>
+      <a href="#zinguerie">Zinguerie</a>
+      <a href="#fenetres-de-toit">Fenêtres de toit</a>
+      <a href="#isolation">Isolation</a>
+    </nav>
+    <div class="lnav-ctas">
+      <a class="pill pill-outline" href="tel:+33500000000">Appeler</a>
+      <a class="pill pill-blue" href="contact.html">Devis gratuit</a>
+    </div>
+  </div>
+</div>
+
+<main id="top">
+  <!-- Motifs partagés : ardoise, tuile, zinc, mousse -->
+  <svg class="defs" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="p-slate" width="48" height="30" patternUnits="userSpaceOnUse">
+        <rect width="48" height="30" fill="#262c33"/>
+        <rect x=".75" width="22.5" height="13.5" rx="1.5" fill="#4a5360"/>
+        <rect x="24.75" width="22.5" height="13.5" rx="1.5" fill="#434c58"/>
+        <rect x="-11.25" y="15" width="22.5" height="13.5" rx="1.5" fill="#465060"/>
+        <rect x="12.75" y="15" width="22.5" height="13.5" rx="1.5" fill="#4e5865"/>
+        <rect x="36.75" y="15" width="22.5" height="13.5" rx="1.5" fill="#465060"/>
+      </pattern>
+      <pattern id="p-slate-l" xlink:href="#p-slate" patternTransform="scale(2.4)"/>
+      <pattern id="p-slate-xl" width="48" height="30" patternUnits="userSpaceOnUse" patternTransform="scale(5.6)">
+        <rect width="48" height="30" fill="#262c33"/>
+        <rect x=".75" width="22.5" height="13.5" rx="1.2" fill="#4a5360"/>
+        <rect x="24.75" width="22.5" height="13.5" rx="1.2" fill="#434c58"/>
+        <rect x="-11.25" y="15" width="22.5" height="13.5" rx="1.2" fill="#465060"/>
+        <rect x="12.75" y="15" width="22.5" height="13.5" rx="1.2" fill="#4e5865"/>
+        <rect x="36.75" y="15" width="22.5" height="13.5" rx="1.2" fill="#465060"/>
+        <path d="M12 9.6v3.4M36 9.6v3.4M0 24.6v3.4M24 24.6v3.4M48 24.6v3.4" stroke="#b9bec5" stroke-width=".7" stroke-linecap="round"/>
+      </pattern>
+      <pattern id="p-tile" width="36" height="44" patternUnits="userSpaceOnUse">
+        <rect width="36" height="44" fill="#8a3c20"/>
+        <rect x="1" y="0" width="16" height="42" rx="8" fill="#c4643c"/>
+        <rect x="19" y="0" width="16" height="42" rx="8" fill="#b65a37"/>
+        <rect x="5" y="5" width="3" height="30" rx="1.5" fill="#d98a62"/>
+        <rect x="23" y="5" width="3" height="30" rx="1.5" fill="#cc7a54"/>
+      </pattern>
+      <pattern id="p-tile-l" xlink:href="#p-tile" patternTransform="scale(1.8)"/>
+      <pattern id="p-tile-xl" xlink:href="#p-tile" patternTransform="scale(4.2)"/>
+      <pattern id="p-zinc" width="44" height="10" patternUnits="userSpaceOnUse">
+        <rect width="44" height="10" fill="#b4b9c0"/>
+        <rect width="3" height="10" fill="#d4d8dd"/>
+        <rect x="3" width="1.5" height="10" fill="#8e949c"/>
+        <rect x="22" width="9" height="10" fill="#bcc1c7"/>
+      </pattern>
+      <pattern id="p-zinc-l" xlink:href="#p-zinc" patternTransform="scale(1.6)"/>
+      <pattern id="p-zinc-xl" xlink:href="#p-zinc" patternTransform="scale(5)"/>
+      <pattern id="p-moss" width="64" height="64" patternUnits="userSpaceOnUse">
+        <circle cx="8" cy="10" r="6" fill="#66762f"/><circle cx="14" cy="14" r="4" fill="#7d8e3e"/>
+        <circle cx="40" cy="6" r="3" fill="#5c6a29"/><circle cx="50" cy="30" r="7" fill="#6f8034"/>
+        <circle cx="44" cy="35" r="4" fill="#859745"/><circle cx="22" cy="44" r="5" fill="#5f6e2b"/>
+        <circle cx="28" cy="48" r="3" fill="#7a8b3b"/><circle cx="58" cy="56" r="4" fill="#66762f"/>
+        <circle cx="6" cy="58" r="3" fill="#7d8e3e"/><circle cx="32" cy="22" r="2.5" fill="#6f8034"/>
+      </pattern>
+      <clipPath id="roof-clip"><polygon points="110,440 150,400 380,100 620,100 850,400 890,440"/></clipPath>
+    </defs>
+  </svg>
+  <section class="phero" aria-labelledby="page-title">
+    <div class="wrap phero-copy">
+      <p class="kicker">Services</p>
+      <h1 class="hero-title" id="page-title"><span class="line"><span>Tout ce qui touche</span></span><span class="line"><span>au toit.</span></span></h1>
+      <p class="hero-sub">Six prestations, de la réparation d'une fuite à la réfection complète, sur ardoise, tuile et zinc.</p>
+      <div class="hero-ctas">
+        <a class="pill pill-blue pill-lg" href="contact.html">Demander un devis</a>
+        <a class="link-chev" href="tel:+33500000000">Appeler le 05 00 00 00 00</a>
+      </div>
+    </div>
+    <div class="wrap phero-media">
+      <div class="frame">
+        <svg viewBox="0 0 1200 460" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Rue de maisons aux toits d'ardoise, de tuile et de zinc">
+          <rect width="1200" height="460" fill="#f5f5f7"/>
+          <g data-rise>
+            <rect x="70" y="330" width="290" height="140" fill="#e9e9ec"/>
+            <rect x="250" y="160" width="34" height="90" fill="#dcdce0"/>
+            <polygon points="40,330 70,300 150,140 280,140 360,300 390,330" fill="url(#p-slate)"/>
+            <path d="M144 140h142" stroke="#8b929b" stroke-width="7" stroke-linecap="round"/>
+            <rect x="110" y="370" width="44" height="100" fill="#d9dfe6"/><rect x="276" y="370" width="44" height="100" fill="#d9dfe6"/>
+          </g>
+          <g data-rise>
+            <rect x="420" y="320" width="270" height="150" fill="#efe9e2"/>
+            <polygon points="398,326 555,224 712,326" fill="url(#p-tile)"/>
+            <path d="M398 326 555 224 712 326" fill="none" stroke="#9c4a2c" stroke-width="4" stroke-linejoin="round"/>
+            <rect x="460" y="364" width="40" height="70" fill="#d9dfe6"/><rect x="610" y="364" width="40" height="70" fill="#d9dfe6"/>
+            <rect x="530" y="384" width="50" height="86" fill="#6b5442"/>
+          </g>
+          <g data-rise>
+            <rect x="745" y="300" width="200" height="170" fill="#e9e9ec"/>
+            <polygon points="726,306 760,270 845,92 930,270 964,306" fill="url(#p-slate)"/>
+            <path d="M845 92 760 270 726 306M845 92 930 270 964 306" fill="none" stroke="#5b6470" stroke-width="3.5" stroke-linejoin="round"/>
+            <rect x="818" y="196" width="54" height="62" fill="#efeff1"/><rect x="828" y="206" width="34" height="46" rx="2" fill="#cdd5de"/>
+            <path d="M808 202 845 166l37 36z" fill="url(#p-slate)"/>
+            <rect x="790" y="340" width="40" height="70" fill="#d9dfe6"/><rect x="862" y="340" width="40" height="70" fill="#d9dfe6"/>
+          </g>
+          <g data-rise>
+            <rect x="1000" y="250" width="180" height="220" fill="#ececef"/>
+            <polygon points="988,252 988,232 1192,196 1192,216" fill="#8f959d"/>
+            <polygon points="988,232 1192,196 1192,150 988,190" fill="url(#p-zinc)"/>
+            <rect x="1030" y="300" width="120" height="70" fill="#d9dfe6"/>
+            <path d="M1090 300v70" stroke="#ececef" stroke-width="3"/>
+          </g>
+          <rect y="456" width="1200" height="4" fill="#d6d6d6"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="materials" aria-label="Détail des prestations">
+    <article class="wrap mat svc" id="couverture">
+      <div class="mat-text">
+        <p class="kicker-sm">Couverture</p>
+        <h2 class="mat-title">Réfection complète, ardoise ou tuile.</h2>
+        <p>Quand une couverture arrive en fin de vie, la réparer ne suffit plus. Nous la refaisons entièrement, de la charpente au faîtage, en respectant les matériaux et les détails de la maison.</p>
+        <ul class="checks">
+          <li>Dépose de l'ancienne couverture et évacuation des gravats</li>
+          <li>Contrôle et reprise de la charpente</li>
+          <li>Écran sous-toiture, contre-liteaux et liteaux neufs</li>
+          <li>Ardoise naturelle, tuile canal, plate ou mécanique</li>
+          <li>Faîtages, arêtiers, rives et noues</li>
+        </ul>
+        <div class="svc-actions">
+          <a class="pill pill-blue pill-lg" href="contact.html#couverture">Demander un devis</a>
+        </div>
+      </div>
+      <div class="mat-media svc-media">
+        <svg class="mat-svg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <polygon points="40,250 72,220 150,66 250,66 328,220 360,250" fill="url(#p-slate)"/>
+              <path d="M150 66 72 220 40 250M250 66 328 220 360 250" fill="none" stroke="#5b6470" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M146 66h108" stroke="#8b929b" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+      </div>
+    </article>
+
+    <article class="wrap mat svc" id="reparation">
+      <div class="mat-text">
+        <p class="kicker-sm">Réparation <span class="status">Urgence fuite</span></p>
+        <h2 class="mat-title">Une fuite ? On trouve, on répare.</h2>
+        <p>Une infiltration s'aggrave vite, et la fuite n'est pas toujours à l'aplomb de la tache. Nous cherchons son origine, puis nous réparons ce qui doit l'être.</p>
+        <ul class="checks">
+          <li>Recherche de fuite</li>
+          <li>Remplacement d'ardoises ou de tuiles cassées</li>
+          <li>Reprise de faîtage, de solins et d'abergements</li>
+          <li>Bâchage provisoire en attendant les travaux</li>
+        </ul>
+        <div class="svc-actions">
+          <a class="pill pill-blue pill-lg" href="contact.html#reparation">Demander un devis</a>
+        </div>
+      </div>
+      <div class="mat-media svc-media" data-fix>
+        <svg class="mat-svg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="url(#p-slate-l)"/>
+              <rect x="174.6" y="144" width="54" height="32.4" fill="#1b1f24"/>
+              <rect x="170" y="152" width="64" height="6" fill="#b98a58"/>
+              <rect class="lift" x="174.6" y="144" width="54" height="32.4" rx="3.6" fill="#6c7784"/>
+            </svg>
+      </div>
+    </article>
+
+    <article class="wrap mat svc" id="entretien">
+      <div class="mat-text">
+        <p class="kicker-sm">Entretien</p>
+        <h2 class="mat-title">Démoussage et traitement hydrofuge.</h2>
+        <p>La mousse retient l'humidité et finit par soulever ardoises et tuiles. Un entretien régulier prolonge la durée de vie de la couverture.</p>
+        <ul class="checks">
+          <li>Nettoyage adapté au matériau</li>
+          <li>Traitement anti-mousse</li>
+          <li>Application d'un hydrofuge</li>
+          <li>Nettoyage des gouttières et des chéneaux</li>
+        </ul>
+        <div class="svc-actions">
+          <a class="pill pill-blue pill-lg" href="contact.html#entretien">Demander un devis</a>
+        </div>
+      </div>
+      <div class="mat-media svc-media ba ba-range">
+        <svg class="mat-svg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="400" height="250" fill="url(#p-tile-l)"/>
+          <rect width="400" height="250" fill="#3f4c1b" opacity=".28"/>
+          <rect width="400" height="250" fill="url(#p-moss)"/>
+        </svg>
+        <div class="ba-after"><svg class="mat-svg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="250" fill="url(#p-tile-l)"/></svg></div>
+        <span class="ba-line" aria-hidden="true"></span>
+        <span class="ba-tag before">Avant</span><span class="ba-tag after">Après</span>
+        <span class="ba-hint" aria-hidden="true">Glissez pour comparer</span>
+        <input type="range" id="ba-entretien" min="0" max="100" value="56" aria-label="Comparer la toiture avant et après démoussage">
+      </div>
+    </article>
+
+    <article class="wrap mat svc" id="zinguerie">
+      <div class="mat-text">
+        <p class="kicker-sm">Zinguerie</p>
+        <h2 class="mat-title">Gouttières, chéneaux et noues.</h2>
+        <p>Gouttières, noues et abergements guident l'eau hors du toit. Quand ils fuient, ce sont les murs et la charpente qui en souffrent.</p>
+        <ul class="checks">
+          <li>Gouttières pendantes et chéneaux</li>
+          <li>Descentes d'eaux pluviales</li>
+          <li>Noues, solins et abergements de cheminée</li>
+          <li>Habillage des rives et des bandeaux</li>
+        </ul>
+        <div class="svc-actions">
+          <a class="pill pill-blue pill-lg" href="contact.html#zinguerie">Demander un devis</a>
+        </div>
+      </div>
+      <div class="mat-media svc-media">
+        <svg class="mat-svg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="146" fill="url(#p-zinc-l)"/>
+              <rect y="146" width="400" height="104" fill="#ececef"/>
+              <rect y="140" width="400" height="10" fill="#8f959d"/>
+              <rect x="-10" y="148" width="420" height="30" rx="15" fill="#a7adb5"/>
+              <rect x="-10" y="154" width="420" height="4" fill="#cfd3d8"/>
+              <rect x="300" y="176" width="24" height="80" fill="#9aa0a8"/>
+              <rect x="304" y="176" width="4" height="80" fill="#c3c8ce"/>
+              <rect x="295" y="172" width="34" height="12" rx="3" fill="#8f959d"/>
+            </svg>
+      </div>
+    </article>
+
+    <article class="wrap mat svc" id="fenetres-de-toit">
+      <div class="mat-text">
+        <p class="kicker-sm">Fenêtres de toit</p>
+        <h2 class="mat-title">Plus de lumière sous les combles.</h2>
+        <p>Une fenêtre de toit fait entrer la lumière dans les combles. Sa pose demande un raccord soigné avec la couverture pour rester étanche.</p>
+        <ul class="checks">
+          <li>Création de l'ouverture dans la charpente</li>
+          <li>Pose de la fenêtre et du raccord d'étanchéité</li>
+          <li>Remplacement d'une fenêtre ancienne</li>
+          <li>Reprise de la couverture autour de la fenêtre</li>
+        </ul>
+        <div class="svc-actions">
+          <a class="pill pill-blue pill-lg" href="contact.html#fenetres-de-toit">Demander un devis</a>
+        </div>
+      </div>
+      <div class="mat-media svc-media">
+        <svg class="mat-svg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="400" height="250" fill="url(#p-slate-l)"/>
+              <rect x="122" y="34" width="156" height="196" rx="6" fill="#9aa0a8"/>
+              <rect x="130" y="42" width="140" height="180" rx="4" fill="#3a3f46"/>
+              <rect x="142" y="54" width="116" height="156" rx="2" fill="#c9d8e5"/>
+              <polygon points="142,150 220,54 246,54 142,182" fill="#dfe9f2"/>
+            </svg>
+      </div>
+    </article>
+
+    <article class="wrap mat svc" id="isolation">
+      <div class="mat-text">
+        <p class="kicker-sm">Isolation</p>
+        <h2 class="mat-title">Isoler en refaisant le toit.</h2>
+        <p>La réfection de la couverture est le bon moment pour isoler : la toiture est ouverte, et l'isolant se pose sans toucher à l'intérieur de la maison.</p>
+        <ul class="checks">
+          <li>Isolation des rampants par l'extérieur</li>
+          <li>Isolation des combles perdus</li>
+          <li>Pare-vapeur et écran adaptés</li>
+          <li>Conseils sur le choix de l'isolant</li>
+        </ul>
+        <div class="svc-actions">
+          <a class="pill pill-blue pill-lg" href="contact.html#isolation">Demander un devis</a>
+        </div>
+      </div>
+      <div class="mat-media svc-media">
+        <svg class="mat-svg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect y="30" width="400" height="30" fill="url(#p-slate)"/>
+              <g fill="#c9985f"><rect x="0" y="62" width="400" height="8"/></g>
+              <rect y="72" width="400" height="6" fill="#6d7f92"/>
+              <rect y="78" width="400" height="172" fill="#ebdeae"/>
+              <path d="M0 110q25-14 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0M0 150q25-14 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0M0 190q25-14 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0M0 230q25-14 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0" fill="none" stroke="#d8c584" stroke-width="2"/>
+              <g fill="#c49a6c"><rect x="30" y="78" width="26" height="172"/><rect x="187" y="78" width="26" height="172"/><rect x="344" y="78" width="26" height="172"/></g>
+              <g fill="#b3895c"><rect x="30" y="78" width="4" height="172"/><rect x="187" y="78" width="4" height="172"/><rect x="344" y="78" width="4" height="172"/></g>
+            </svg>
+      </div>
+    </article>
+  </section>
+
+  <section class="band" id="signes" aria-labelledby="signes-title">
+    <div class="wrap">
+      <h2 class="section-title" id="signes-title" data-reveal>Quand faire vérifier son toit ?</h2>
+      <p class="lead" data-reveal>Certains signes ne trompent pas. Mieux vaut appeler tôt que réparer tard.</p>
+      <div class="tiles" data-reveal-group>
+        <div class="tile"><p class="card-kicker">Intérieur</p><h3>Une tache au plafond</h3><p>Souvent le signe d'une infiltration, parfois loin de la fuite elle-même.</p></div>
+        <div class="tile"><p class="card-kicker">Couverture</p><h3>Des ardoises ou des tuiles déplacées</h3><p>Elles se voient souvent depuis le sol, après un coup de vent.</p></div>
+        <div class="tile"><p class="card-kicker">Entretien</p><h3>Une mousse épaisse</h3><p>Elle retient l'eau et fragilise la couverture, surtout sur les pans au nord.</p></div>
+        <div class="tile"><p class="card-kicker">Zinguerie</p><h3>Une gouttière qui déborde</h3><p>Bouchée ou mal inclinée, elle renvoie l'eau sur les murs et les rives.</p></div>
+        <div class="tile"><p class="card-kicker">Intempéries</p><h3>Après un orage de grêle</h3><p>Ardoises et tuiles peuvent être fêlées sans que cela se voie.</p></div>
+        <div class="tile"><p class="card-kicker">Immobilier</p><h3>Avant d'acheter ou de vendre</h3><p>Un état de la toiture évite les mauvaises surprises après la signature.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="cta-title">
+    <div class="wrap">
+      <h2 class="section-title" id="cta-title" data-reveal>Un projet, une fuite, une question ?</h2>
+      <p class="lead" data-reveal>Décrivez-nous votre toit. Nous vous rappelons pour convenir d'une visite.</p>
+      <div class="hero-ctas" data-reveal>
+        <a class="pill pill-blue pill-lg" href="contact.html">Demander un devis</a>
+        <a class="link-chev" href="tel:+33500000000">Appeler le 05 00 00 00 00</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">RF Rénovation</a>
+        <p class="foot-about">Couvreur à Pau. Couverture, réparation, zinguerie et entretien de toitures dans les Pyrénées-Atlantiques, les Hautes-Pyrénées et les Landes.</p>
+      </div>
+      <div>
+        <h4>Prestations</h4>
+        <ul>
+          <li><a href="services.html#couverture">Couverture</a></li>
+          <li><a href="services.html#reparation">Réparation</a></li>
+          <li><a href="services.html#entretien">Démoussage</a></li>
+          <li><a href="services.html#zinguerie">Zinguerie</a></li>
+          <li><a href="services.html#fenetres-de-toit">Fenêtres de toit</a></li>
+          <li><a href="services.html#isolation">Isolation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="a-propos.html#zone">Zone d'intervention</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+33500000000">05 00 00 00 00</a></li>
+          <li><a href="mailto:contact@rf-renovation.fr">contact@rf-renovation.fr</a></li>
+          <li>Pau (64000)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 RF Rénovation. Tous droits réservés.</p>
+      <p><a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

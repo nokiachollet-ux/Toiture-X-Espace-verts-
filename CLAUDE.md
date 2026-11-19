@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Projet
 
-Site vitrine statique, en français, pour le client **RF Rénovation** (travaux d'espaces verts et de toiture, basé à Pau, zone d'intervention 64-65-40). Objectif : être visible en ligne et attirer de nouveaux clients, avec les deux activités sur le site. Plan de site : Accueil > Espaces verts > Toitures > Contact, plus Mentions légales (pas de page « Services » intermédiaire : le menu pointe directement vers les deux activités).
+Site vitrine statique, en français, pour le client **RF Rénovation**, couvreur basé à Pau (zone d'intervention 64-65-40). Le site ne présente plus que l'activité toiture. Plan de site : Accueil > Services > À propos > Contact, plus Mentions légales.
 
-HTML, CSS et JavaScript vanilla uniquement. Pas de bundler, de linter ni de tests automatisés.
+HTML, CSS et JavaScript vanilla, animations GSAP 3.12.5 + ScrollTrigger chargées depuis cdnjs. Pas de bundler, de linter ni de tests automatisés.
 
 ## Commandes
 
@@ -16,28 +16,26 @@ HTML, CSS et JavaScript vanilla uniquement. Pas de bundler, de linter ni de test
 
 ## Architecture
 
-Cinq pages : `index.html`, `contact.html`, `mentions-legales.html`, `services/espaces-verts.html`, `services/toitures.html`.
-
-**Refonte en cours (toiture uniquement, style « galerie blanche » façon Apple).** La nouvelle page d'accueil `index.html` a ses propres fichiers : `css/accueil.css` et `js/accueil.js` (GSAP 3.12.5 + ScrollTrigger depuis cdnjs). Elle ne partage ni l'en-tête, ni le pied de page, ni le sprite décrits plus bas, et ses liens de menu pointent vers des ancres internes (`#approche`, `#prestations`, `#contact`) tant que les pages À propos, Services et Contact n'ont pas été refaites. Les autres pages utilisent encore l'ancien `css/style.css` et `js/main.js` (les notes ci-dessous les concernent). Dans `index.html`, tout le contenu reste visible sans JavaScript : GSAP ne pose que des états de départ, et les ardoises du toit sont générées en JS par-dessus un motif SVG de secours.
+Cinq pages : `index.html`, `services.html`, `a-propos.html`, `contact.html`, `mentions-legales.html`. Une seule feuille `css/site.css` et un seul script `js/site.js`. Direction artistique : « galerie blanche » façon Apple (fond blanc, bandes `#f5f5f7`, bleu réservé aux pilules et aux liens, rayons de 28 px, aucune ombre, police Inter).
 
 Points à connaître avant de modifier :
 
-- **Pas de templating.** L'en-tête, le pied de page, la barre mobile « Appeler / Demander un devis » et le sprite SVG d'icônes (`#i-leaf`, `#i-roof`, `#i-team`, `#i-phone`, placé en début de `<main>`) sont dupliqués dans chaque page. Toute modification de l'un d'eux doit être reportée sur les cinq fichiers.
-- **Chemins relatifs uniquement.** Les pages de `services/` préfixent leurs liens par `../`. Ne jamais utiliser de chemin absolu (`/css/...`) : le site est servi sous `/Toiture-X-Espace-verts-/` sur GitHub Pages.
-- **Liens vers le devis.** Sur l'accueil le bouton pointe vers `#contact` (formulaire de la page). Sur les pages d'activité (`services/`), il pointe vers `../contact.html#espaces-verts` ou `#toiture`. `js/main.js` lit ce hash pour présélectionner `#f-type` : les `value` des `<option>` (`espaces-verts`, `toiture`, `les-deux`) doivent rester alignées avec ces ancres.
-- **Emplacements photo.** Chaque image est un `<figure class="photo photo-garden|photo-roof">` avec un visuel provisoire (icône + légende « Photo à venir »). Pour une vraie photo, ajouter un `<img>` dans la figure : `.photo img` le fait recouvrir l'emplacement (`object-fit:cover`). Les figures de la galerie portent `data-cat="garden|roof"`, utilisé par le filtre.
-- **JavaScript (`js/main.js`).** Menu mobile, apparition au défilement des éléments `.reveal` (la classe `js` est posée sur `<html>`, donc sans JS rien n'est masqué), filtre de la galerie (`.chip[data-filter]`), validation du formulaire. Le formulaire n'envoie rien : il affiche un message de maquette. L'envoi réel reste à brancher.
-- **CSS.** Tous les tokens (couleurs, polices, hauteur d'en-tête) sont dans `:root`. Polices Cormorant Garamond et Inter chargées depuis Google Fonts. Points de rupture principaux : 820 px (menu burger, grilles en une colonne) et 460 px.
+- **Pas de templating.** La navigation globale (`.gnav` + menu mobile `#menu`), le pied de page, les balises `<script>` et le bloc de motifs SVG (`<svg class="defs">` en début de `<main>` : `#p-slate`, `#p-tile`, `#p-zinc`, `#p-moss`…) sont dupliqués dans chaque page. Toute modification doit être reportée sur les cinq fichiers. Seule la navigation locale (`.lnav`, titre et ancres de la page) change d'une page à l'autre.
+- **Chemins relatifs uniquement.** Ne jamais utiliser de chemin absolu (`/css/...`) : le site est servi sous `/Toiture-X-Espace-verts-/` sur GitHub Pages.
+- **Ancres des services et formulaire.** Les blocs de `services.html` ont pour `id` : `couverture`, `reparation`, `entretien`, `zinguerie`, `fenetres-de-toit`, `isolation`. Leurs boutons pointent vers `contact.html#<id>`, et `js/site.js` lit ce hash pour présélectionner `#f-type` : les `value` des `<option>` doivent rester identiques à ces `id`. L'accueil a aussi un formulaire (`#contact`).
+- **Visuels.** Pas de photos pour l'instant : toutes les illustrations sont des SVG dessinés (toit de l'accueil, rue de maisons sur Services, Pyrénées sur À propos, textures ardoise/tuile/zinc). Les ardoises du toit de l'accueil sont générées par `js/site.js` (`#slates`) par-dessus un motif de secours.
+- **JavaScript (`js/site.js`).** Chaque bloc ne s'exécute que si la page contient les éléments concernés. Sans JS, sans GSAP ou avec `prefers-reduced-motion`, tout le contenu reste visible : GSAP ne pose que des états de départ. Attributs utiles : `data-reveal` (apparition), `data-reveal-group` (enfants en cascade), `data-words` (texte qui s'allume mot à mot), `data-depth` et `data-rise` (parallaxe et entrée des visuels d'en-tête), `data-fix` (ardoise remise en place). Au-dessus de 820 px, le carrousel des prestations et l'anatomie de l'accueil sont épinglés (ScrollTrigger `pin`). Le formulaire n'envoie rien : l'envoi réel reste à brancher.
+- **CSS.** Tous les tokens sont dans `:root` de `css/site.css`. Points de rupture : 1000 px (ancres de la navigation locale masquées), 820 px (menu burger, une colonne) et 460 px.
+- **Anciennes pages.** `services/toitures.html` redirige vers `services.html`. `services/espaces-verts.html` n'est plus liée et utilise encore l'ancien `css/style.css` et `js/main.js`.
 
 ## Contenu provisoire à remplacer
 
-- Téléphone `05 00 00 00 00` / `tel:+33500000000`, présent dans toutes les pages.
+- Téléphone `05 00 00 00 00` / `tel:+33500000000`, e-mail `contact@rf-renovation.fr` et horaires, présents dans toutes les pages.
 - `https://example.com` dans `sitemap.xml` et `robots.txt` (nom de domaine à définir).
-- Mentions légales : champs « À compléter » (forme juridique, SIRET, adresse, e-mail, assurance, hébergeur).
-- Toutes les photos, et les textes de prestations, étapes et communes desservies, rédigés par défaut et à faire valider par le client.
+- Mentions légales : champs « À compléter » (forme juridique, SIRET, adresse, directeur de la publication, assurance).
+- Textes des prestations, engagements, étapes, questions fréquentes et communes desservies, rédigés par défaut et à faire valider par le client. Photos réelles à ajouter.
 
 ## Conventions
 
 Contenu, commentaires et messages de commit en français. Ne pas inventer d'informations sur l'entreprise (avis, ancienneté, certifications).
 
-Si la page d'accueil est publiée comme Artifact, `index.html` doit être publié sous forme de fragment (sans `<!DOCTYPE>`, `<html>`, `<head>` ni `<body>`, avec `<title>` et les `<link>` en tête) ; les autres pages sont publiées telles quelles, avec les fichiers CSS et JS.

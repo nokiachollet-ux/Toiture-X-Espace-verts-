@@ -2,101 +2,197 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Mentions légales | RF Rénovation</title>
-  <meta name="description" content="Mentions légales de RF Rénovation.">
+  <meta name="description" content="Mentions légales du site de RF Rénovation, couvreur à Pau.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="index.html"><span class="logo-mark">RF</span><span class="logo-name">Rénovation</span></a>
-    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"></button>
-    <nav id="menu" aria-label="Navigation principale">
+<header class="gnav">
+  <div class="wrap gnav-in">
+    <a class="brand" href="index.html" aria-label="RF Rénovation, accueil">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12.5 12 4l9.5 8.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10.5V20h12v-9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      RF Rénovation
+    </a>
+    <nav class="gnav-links" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
-      <a href="services/espaces-verts.html">Espaces Verts</a>
-      <a href="services/toitures.html">Toitures</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="header-cta">
-      <a class="header-tel" href="tel:+33500000000">05 00 00 00 00</a>
-      <a class="btn btn-primary btn-sm" href="contact.html">Demander un devis</a>
+    <a class="gnav-tel" href="tel:+33500000000">05 00 00 00 00</a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span></button>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <div class="menu-top">
+      <span class="brand">RF Rénovation</span>
+      <button class="menu-close" type="button" aria-label="Fermer le menu">×</button>
     </div>
-  </header>
+    <nav aria-label="Menu mobile">
+      <a href="index.html">Accueil</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-foot">
+      <a class="tel" href="tel:+33500000000">05 00 00 00 00</a>
+      <a class="pill pill-blue pill-lg" href="contact.html">Demander un devis</a>
+    </div>
+  </div>
+</header>
 
-  <main>
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-    <symbol id="i-leaf" viewBox="0 0 200 260"><path d="M100 255V40"/><path d="M100 200c-40-6-60-30-62-60 36 4 58 24 62 60z"/><path d="M100 160c40-6 60-30 62-60-36 4-58 24-62 60z"/><path d="M100 120c-30-4-46-22-48-46 28 3 44 20 48 46z"/><path d="M100 90c28-4 42-20 44-42-26 3-40 18-44 42z"/><path d="M100 40c-10-10-10-24 0-34 10 10 10 24 0 34z"/></symbol>
-    <symbol id="i-roof" viewBox="0 0 240 200"><path d="M10 110L120 20l110 90"/><path d="M30 110v80h180v-80"/><path d="M40 88h160M62 66h116M84 44h72"/><path d="M80 110v80M120 110v80M160 110v80"/></symbol>
-    <symbol id="i-team" viewBox="0 0 48 48"><circle cx="17" cy="16" r="6"/><path d="M5 40c0-7 5-12 12-12s12 5 12 12"/><circle cx="34" cy="19" r="5"/><path d="M33 29c6 0 10 4 10 11"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
-  </defs></svg>
+<div class="lnav" id="lnav">
+  <div class="wrap lnav-in">
+    <a class="lnav-title" href="#top">Mentions légales</a>
+    <div class="lnav-ctas">
+      <a class="pill pill-outline" href="tel:+33500000000">Appeler</a>
+      <a class="pill pill-blue" href="contact.html">Devis gratuit</a>
+    </div>
+  </div>
+</div>
 
-    <section class="section legal">
-      <div class="container">
-        <p class="crumbs"><a href="index.html">Accueil</a> <span aria-hidden="true">/</span> Mentions légales</p>
-        <h1>Mentions légales</h1>
-        <h2>Éditeur du site</h2>
-        <dl>
-          <dt>Raison sociale</dt><dd>RF Rénovation</dd>
-          <dt>Forme juridique</dt><dd class="todo">À compléter</dd>
-          <dt>SIRET</dt><dd class="todo">À compléter</dd>
-          <dt>Adresse</dt><dd class="todo">À compléter (Pau)</dd>
-          <dt>Téléphone</dt><dd>05 00 00 00 00</dd>
-          <dt>E-mail</dt><dd class="todo">À compléter</dd>
-          <dt>Directeur de la publication</dt><dd class="todo">À compléter</dd>
-        </dl>
-        <h2>Assurance professionnelle</h2>
-        <dl>
-          <dt>Assureur et garanties</dt><dd class="todo">À compléter</dd>
-          <dt>Couverture géographique</dt><dd class="todo">À compléter</dd>
-        </dl>
-        <h2>Hébergement</h2>
-        <dl><dt>Hébergeur</dt><dd class="todo">À compléter (nom, adresse, téléphone)</dd></dl>
-        <h2>Données personnelles</h2>
-        <p>Les informations transmises via le formulaire de contact servent uniquement à répondre à votre demande. Vous pouvez demander leur consultation, leur rectification ou leur suppression en nous contactant.</p>
+<main id="top">
+  <!-- Motifs partagés : ardoise, tuile, zinc, mousse -->
+  <svg class="defs" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="p-slate" width="48" height="30" patternUnits="userSpaceOnUse">
+        <rect width="48" height="30" fill="#262c33"/>
+        <rect x=".75" width="22.5" height="13.5" rx="1.5" fill="#4a5360"/>
+        <rect x="24.75" width="22.5" height="13.5" rx="1.5" fill="#434c58"/>
+        <rect x="-11.25" y="15" width="22.5" height="13.5" rx="1.5" fill="#465060"/>
+        <rect x="12.75" y="15" width="22.5" height="13.5" rx="1.5" fill="#4e5865"/>
+        <rect x="36.75" y="15" width="22.5" height="13.5" rx="1.5" fill="#465060"/>
+      </pattern>
+      <pattern id="p-slate-l" xlink:href="#p-slate" patternTransform="scale(2.4)"/>
+      <pattern id="p-slate-xl" width="48" height="30" patternUnits="userSpaceOnUse" patternTransform="scale(5.6)">
+        <rect width="48" height="30" fill="#262c33"/>
+        <rect x=".75" width="22.5" height="13.5" rx="1.2" fill="#4a5360"/>
+        <rect x="24.75" width="22.5" height="13.5" rx="1.2" fill="#434c58"/>
+        <rect x="-11.25" y="15" width="22.5" height="13.5" rx="1.2" fill="#465060"/>
+        <rect x="12.75" y="15" width="22.5" height="13.5" rx="1.2" fill="#4e5865"/>
+        <rect x="36.75" y="15" width="22.5" height="13.5" rx="1.2" fill="#465060"/>
+        <path d="M12 9.6v3.4M36 9.6v3.4M0 24.6v3.4M24 24.6v3.4M48 24.6v3.4" stroke="#b9bec5" stroke-width=".7" stroke-linecap="round"/>
+      </pattern>
+      <pattern id="p-tile" width="36" height="44" patternUnits="userSpaceOnUse">
+        <rect width="36" height="44" fill="#8a3c20"/>
+        <rect x="1" y="0" width="16" height="42" rx="8" fill="#c4643c"/>
+        <rect x="19" y="0" width="16" height="42" rx="8" fill="#b65a37"/>
+        <rect x="5" y="5" width="3" height="30" rx="1.5" fill="#d98a62"/>
+        <rect x="23" y="5" width="3" height="30" rx="1.5" fill="#cc7a54"/>
+      </pattern>
+      <pattern id="p-tile-l" xlink:href="#p-tile" patternTransform="scale(1.8)"/>
+      <pattern id="p-tile-xl" xlink:href="#p-tile" patternTransform="scale(4.2)"/>
+      <pattern id="p-zinc" width="44" height="10" patternUnits="userSpaceOnUse">
+        <rect width="44" height="10" fill="#b4b9c0"/>
+        <rect width="3" height="10" fill="#d4d8dd"/>
+        <rect x="3" width="1.5" height="10" fill="#8e949c"/>
+        <rect x="22" width="9" height="10" fill="#bcc1c7"/>
+      </pattern>
+      <pattern id="p-zinc-l" xlink:href="#p-zinc" patternTransform="scale(1.6)"/>
+      <pattern id="p-zinc-xl" xlink:href="#p-zinc" patternTransform="scale(5)"/>
+      <pattern id="p-moss" width="64" height="64" patternUnits="userSpaceOnUse">
+        <circle cx="8" cy="10" r="6" fill="#66762f"/><circle cx="14" cy="14" r="4" fill="#7d8e3e"/>
+        <circle cx="40" cy="6" r="3" fill="#5c6a29"/><circle cx="50" cy="30" r="7" fill="#6f8034"/>
+        <circle cx="44" cy="35" r="4" fill="#859745"/><circle cx="22" cy="44" r="5" fill="#5f6e2b"/>
+        <circle cx="28" cy="48" r="3" fill="#7a8b3b"/><circle cx="58" cy="56" r="4" fill="#66762f"/>
+        <circle cx="6" cy="58" r="3" fill="#7d8e3e"/><circle cx="32" cy="22" r="2.5" fill="#6f8034"/>
+      </pattern>
+      <clipPath id="roof-clip"><polygon points="110,440 150,400 380,100 620,100 850,400 890,440"/></clipPath>
+    </defs>
+  </svg>
+  <section class="phero phero-short" aria-labelledby="page-title">
+    <div class="wrap phero-copy">
+      <p class="kicker">Informations légales</p>
+      <h1 class="hero-title" id="page-title"><span class="line"><span>Mentions</span></span><span class="line"><span>légales.</span></span></h1>
+      <p class="hero-sub">Informations sur l'éditeur et l'hébergeur du site.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Mentions légales">
+    <div class="wrap legal">
+      <h2>Éditeur du site</h2>
+      <dl class="coords">
+        <div><dt>Raison sociale</dt><dd>RF Rénovation</dd></div>
+        <div><dt>Forme juridique</dt><dd><span class="todo">À compléter</span></dd></div>
+        <div><dt>SIRET</dt><dd><span class="todo">À compléter</span></dd></div>
+        <div><dt>Adresse</dt><dd><span class="todo">À compléter</span> (Pau, 64000)</dd></div>
+        <div><dt>Téléphone</dt><dd>05 00 00 00 00</dd></div>
+        <div><dt>E-mail</dt><dd>contact@rf-renovation.fr</dd></div>
+        <div><dt>Directeur de la publication</dt><dd><span class="todo">À compléter</span></dd></div>
+      </dl>
+
+      <h2>Assurance professionnelle</h2>
+      <dl class="coords">
+        <div><dt>Assureur et garanties</dt><dd><span class="todo">À compléter</span></dd></div>
+        <div><dt>Couverture géographique</dt><dd><span class="todo">À compléter</span></dd></div>
+      </dl>
+
+      <h2>Hébergement</h2>
+      <dl class="coords">
+        <div><dt>Hébergeur</dt><dd>GitHub Pages, GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</dd></div>
+      </dl>
+
+      <h2>Propriété intellectuelle</h2>
+      <p>Les textes et illustrations de ce site appartiennent à RF Rénovation. Toute reproduction sans autorisation est interdite.</p>
+
+      <h2>Données personnelles</h2>
+      <p>Les informations transmises via le formulaire de contact servent uniquement à répondre à votre demande. Vous pouvez demander leur consultation, leur rectification ou leur suppression en nous contactant.</p>
+
+      <h2>Cookies et services tiers</h2>
+      <p>Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience.</p>
+      <p>Les polices de caractères sont chargées depuis Google Fonts et les animations depuis cdnjs (Cloudflare). Ces services reçoivent l'adresse IP du visiteur pour fournir les fichiers.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">RF Rénovation</a>
+        <p class="foot-about">Couvreur à Pau. Couverture, réparation, zinguerie et entretien de toitures dans les Pyrénées-Atlantiques, les Hautes-Pyrénées et les Landes.</p>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
       <div>
-        <p class="footer-logo">RF Rénovation</p>
-        <p>Espaces verts et toiture.<br>Basé à Pau.</p>
-      </div>
-      <div>
-        <p class="footer-title">Le site</p>
+        <h4>Prestations</h4>
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="services/espaces-verts.html">Espaces verts</a></li>
-          <li><a href="services/toitures.html">Toitures</a></li>
+          <li><a href="services.html#couverture">Couverture</a></li>
+          <li><a href="services.html#reparation">Réparation</a></li>
+          <li><a href="services.html#entretien">Démoussage</a></li>
+          <li><a href="services.html#zinguerie">Zinguerie</a></li>
+          <li><a href="services.html#fenetres-de-toit">Fenêtres de toit</a></li>
+          <li><a href="services.html#isolation">Isolation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="a-propos.html#zone">Zone d'intervention</a></li>
           <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-title">Zone d'intervention</p>
-        <ul>
-          <li>Pyrénées-Atlantiques (64)</li>
-          <li>Hautes-Pyrénées (65)</li>
-          <li>Landes (40)</li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-title">Contact</p>
-        <ul>
-          <li><a href="tel:+33500000000">05 00 00 00 00</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+33500000000">05 00 00 00 00</a></li>
+          <li><a href="mailto:contact@rf-renovation.fr">contact@rf-renovation.fr</a></li>
+          <li>Pau (64000)</li>
+        </ul>
+      </div>
     </div>
-  </footer>
-  <div class="mobile-bar">
-    <a href="tel:+33500000000">Appeler</a>
-    <a href="contact.html" class="mb-primary">Demander un devis</a>
+    <div class="foot-bottom">
+      <p>© 2026 RF Rénovation. Tous droits réservés.</p>
+      <p><a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
   </div>
-  <script src="js/main.js"></script>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>
