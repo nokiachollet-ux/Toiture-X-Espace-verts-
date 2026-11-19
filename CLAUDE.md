@@ -16,7 +16,9 @@ HTML, CSS et JavaScript vanilla uniquement. Pas de bundler, de linter ni de test
 
 ## Architecture
 
-Cinq pages : `index.html`, `contact.html`, `mentions-legales.html`, `services/espaces-verts.html`, `services/toitures.html`. Un seul `css/style.css` et un seul `js/main.js`.
+Cinq pages : `index.html`, `contact.html`, `mentions-legales.html`, `services/espaces-verts.html`, `services/toitures.html`.
+
+**Refonte en cours (toiture uniquement, style « galerie blanche » façon Apple).** La nouvelle page d'accueil `index.html` a ses propres fichiers : `css/accueil.css` et `js/accueil.js` (GSAP 3.12.5 + ScrollTrigger depuis cdnjs). Elle ne partage ni l'en-tête, ni le pied de page, ni le sprite décrits plus bas, et ses liens de menu pointent vers des ancres internes (`#approche`, `#prestations`, `#contact`) tant que les pages À propos, Services et Contact n'ont pas été refaites. Les autres pages utilisent encore l'ancien `css/style.css` et `js/main.js` (les notes ci-dessous les concernent). Dans `index.html`, tout le contenu reste visible sans JavaScript : GSAP ne pose que des états de départ, et les ardoises du toit sont générées en JS par-dessus un motif SVG de secours.
 
 Points à connaître avant de modifier :
 

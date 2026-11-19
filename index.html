@@ -2,238 +2,506 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Espaces verts et toiture à Pau | RF Rénovation</title>
-  <meta name="description" content="RF Rénovation, travaux d'espaces verts et de toiture à Pau et dans les Pyrénées-Atlantiques, Hautes-Pyrénées et Landes.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Couvreur à Pau, toiture ardoise et tuile | RF Rénovation</title>
+  <meta name="description" content="RF Rénovation, couvreur à Pau : couverture ardoise et tuile, réparation de fuites, démoussage, zinguerie et fenêtres de toit dans les Pyrénées-Atlantiques, les Hautes-Pyrénées et les Landes.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/accueil.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="index.html"><span class="logo-mark">RF</span><span class="logo-name">Rénovation</span></a>
-    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"></button>
-    <nav id="menu" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a href="services/espaces-verts.html">Espaces Verts</a>
-      <a href="services/toitures.html">Toitures</a>
-      <a href="contact.html">Contact</a>
+<header class="gnav">
+  <div class="wrap gnav-in">
+    <a class="brand" href="index.html" aria-label="RF Rénovation, accueil">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12.5 12 4l9.5 8.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10.5V20h12v-9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      RF Rénovation
+    </a>
+    <nav class="gnav-links" aria-label="Navigation principale">
+      <a href="index.html" aria-current="page">Accueil</a>
+      <a href="#approche">À propos</a>
+      <a href="#prestations">Services</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <div class="header-cta">
-      <a class="header-tel" href="tel:+33500000000">05 00 00 00 00</a>
-      <a class="btn btn-primary btn-sm" href="#contact">Demander un devis</a>
+    <a class="gnav-tel" href="tel:+33500000000">05 00 00 00 00</a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span></button>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <div class="menu-top">
+      <span class="brand">RF Rénovation</span>
+      <button class="menu-close" type="button" aria-label="Fermer le menu">×</button>
     </div>
-  </header>
+    <nav aria-label="Menu mobile">
+      <a href="index.html">Accueil</a>
+      <a href="#approche">À propos</a>
+      <a href="#prestations">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="menu-foot">
+      <a class="tel" href="tel:+33500000000">05 00 00 00 00</a>
+      <a class="pill pill-blue pill-lg" href="#contact">Demander un devis</a>
+    </div>
+  </div>
+</header>
 
-  <main>
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-    <symbol id="i-leaf" viewBox="0 0 200 260"><path d="M100 255V40"/><path d="M100 200c-40-6-60-30-62-60 36 4 58 24 62 60z"/><path d="M100 160c40-6 60-30 62-60-36 4-58 24-62 60z"/><path d="M100 120c-30-4-46-22-48-46 28 3 44 20 48 46z"/><path d="M100 90c28-4 42-20 44-42-26 3-40 18-44 42z"/><path d="M100 40c-10-10-10-24 0-34 10 10 10 24 0 34z"/></symbol>
-    <symbol id="i-roof" viewBox="0 0 240 200"><path d="M10 110L120 20l110 90"/><path d="M30 110v80h180v-80"/><path d="M40 88h160M62 66h116M84 44h72"/><path d="M80 110v80M120 110v80M160 110v80"/></symbol>
-    <symbol id="i-team" viewBox="0 0 48 48"><circle cx="17" cy="16" r="6"/><path d="M5 40c0-7 5-12 12-12s12 5 12 12"/><circle cx="34" cy="19" r="5"/><path d="M33 29c6 0 10 4 10 11"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
-  </defs></svg>
+<div class="lnav" id="lnav">
+  <div class="wrap lnav-in">
+    <a class="lnav-title" href="#top">Toiture</a>
+    <nav class="lnav-links" aria-label="Sur cette page">
+      <a href="#prestations">Prestations</a>
+      <a href="#anatomie">Anatomie</a>
+      <a href="#materiaux">Matériaux</a>
+      <a href="#methode">Méthode</a>
+      <a href="#zone">Zone</a>
+    </nav>
+    <div class="lnav-ctas">
+      <a class="pill pill-outline" href="tel:+33500000000">Appeler</a>
+      <a class="pill pill-blue" href="#contact">Devis gratuit</a>
+    </div>
+  </div>
+</div>
 
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <p class="eyebrow"><span class="eyebrow-long">Pau · Pyrénées-Atlantiques · Hautes-Pyrénées · Landes</span><span class="eyebrow-short">Pau · 64 · 65 · 40</span></p>
-          <h1>Jardin et toiture, <em>entretenus avec soin.</em></h1>
-          <p class="lead">RF Rénovation réalise vos travaux d'espaces verts et de toiture autour de Pau. Un seul interlocuteur, du premier rendez-vous à la fin du chantier.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#contact">Demander un devis</a>
-            <a class="tel-link" href="tel:+33500000000"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>05 00 00 00 00</a>
-          </div>
-          <p class="needs"><span class="needs-label">Votre besoin</span>
-            <a class="need need-garden" href="services/espaces-verts.html">Espaces verts <span aria-hidden="true">→</span></a>
-            <a class="need need-roof" href="services/toitures.html">Toiture <span aria-hidden="true">→</span></a>
-          </p>
-          <ul class="assure">
-            <li>Un seul interlocuteur</li>
-            <li>Devis détaillé avant travaux</li>
-            <li>Intervention 64 · 65 · 40</li>
-          </ul>
-        </div>
-        <div class="hero-photos">
-          <figure class="photo photo-roof hero-main"><svg aria-hidden="true"><use href="#i-roof"/></svg><figcaption>Photo · toiture</figcaption></figure>
-          <figure class="photo photo-garden hero-second"><svg aria-hidden="true"><use href="#i-leaf"/></svg><figcaption>Photo · jardin</figcaption></figure>
-          <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true">
-            <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-            <circle class="stamp-bg" cx="100" cy="100" r="99"/>
-            <circle cx="100" cy="100" r="93" fill="none" stroke="currentColor" stroke-width=".8"/>
-            <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" stroke-width=".8"/>
-            <text font-size="11.5" letter-spacing="3" fill="currentColor"><textPath href="#circ" textLength="484" lengthAdjust="spacing">RF RÉNOVATION · PAU · ESPACES VERTS · TOITURE · </textPath></text>
-            <text class="stamp-rf" x="100" y="112" text-anchor="middle" font-size="34" fill="currentColor">RF</text>
-          </svg>
+<main id="top">
+  <!-- Motifs partagés : ardoise, tuile, zinc, mousse -->
+  <svg class="defs" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="p-slate" width="48" height="30" patternUnits="userSpaceOnUse">
+        <rect width="48" height="30" fill="#262c33"/>
+        <rect x=".75" width="22.5" height="13.5" rx="1.5" fill="#4a5360"/>
+        <rect x="24.75" width="22.5" height="13.5" rx="1.5" fill="#434c58"/>
+        <rect x="-11.25" y="15" width="22.5" height="13.5" rx="1.5" fill="#465060"/>
+        <rect x="12.75" y="15" width="22.5" height="13.5" rx="1.5" fill="#4e5865"/>
+        <rect x="36.75" y="15" width="22.5" height="13.5" rx="1.5" fill="#465060"/>
+      </pattern>
+      <pattern id="p-slate-l" xlink:href="#p-slate" patternTransform="scale(2.4)"/>
+      <pattern id="p-slate-xl" width="48" height="30" patternUnits="userSpaceOnUse" patternTransform="scale(5.6)">
+        <rect width="48" height="30" fill="#262c33"/>
+        <rect x=".75" width="22.5" height="13.5" rx="1.2" fill="#4a5360"/>
+        <rect x="24.75" width="22.5" height="13.5" rx="1.2" fill="#434c58"/>
+        <rect x="-11.25" y="15" width="22.5" height="13.5" rx="1.2" fill="#465060"/>
+        <rect x="12.75" y="15" width="22.5" height="13.5" rx="1.2" fill="#4e5865"/>
+        <rect x="36.75" y="15" width="22.5" height="13.5" rx="1.2" fill="#465060"/>
+        <path d="M12 9.6v3.4M36 9.6v3.4M0 24.6v3.4M24 24.6v3.4M48 24.6v3.4" stroke="#b9bec5" stroke-width=".7" stroke-linecap="round"/>
+      </pattern>
+      <pattern id="p-tile" width="36" height="44" patternUnits="userSpaceOnUse">
+        <rect width="36" height="44" fill="#8a3c20"/>
+        <rect x="1" y="0" width="16" height="42" rx="8" fill="#c4643c"/>
+        <rect x="19" y="0" width="16" height="42" rx="8" fill="#b65a37"/>
+        <rect x="5" y="5" width="3" height="30" rx="1.5" fill="#d98a62"/>
+        <rect x="23" y="5" width="3" height="30" rx="1.5" fill="#cc7a54"/>
+      </pattern>
+      <pattern id="p-tile-l" xlink:href="#p-tile" patternTransform="scale(1.8)"/>
+      <pattern id="p-tile-xl" xlink:href="#p-tile" patternTransform="scale(4.2)"/>
+      <pattern id="p-zinc" width="44" height="10" patternUnits="userSpaceOnUse">
+        <rect width="44" height="10" fill="#b4b9c0"/>
+        <rect width="3" height="10" fill="#d4d8dd"/>
+        <rect x="3" width="1.5" height="10" fill="#8e949c"/>
+        <rect x="22" width="9" height="10" fill="#bcc1c7"/>
+      </pattern>
+      <pattern id="p-zinc-l" xlink:href="#p-zinc" patternTransform="scale(1.6)"/>
+      <pattern id="p-zinc-xl" xlink:href="#p-zinc" patternTransform="scale(5)"/>
+      <pattern id="p-moss" width="64" height="64" patternUnits="userSpaceOnUse">
+        <circle cx="8" cy="10" r="6" fill="#66762f"/><circle cx="14" cy="14" r="4" fill="#7d8e3e"/>
+        <circle cx="40" cy="6" r="3" fill="#5c6a29"/><circle cx="50" cy="30" r="7" fill="#6f8034"/>
+        <circle cx="44" cy="35" r="4" fill="#859745"/><circle cx="22" cy="44" r="5" fill="#5f6e2b"/>
+        <circle cx="28" cy="48" r="3" fill="#7a8b3b"/><circle cx="58" cy="56" r="4" fill="#66762f"/>
+        <circle cx="6" cy="58" r="3" fill="#7d8e3e"/><circle cx="32" cy="22" r="2.5" fill="#6f8034"/>
+      </pattern>
+      <clipPath id="roof-clip"><polygon points="110,440 150,400 380,100 620,100 850,400 890,440"/></clipPath>
+    </defs>
+  </svg>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-copy">
+      <p class="kicker">Couvreur à Pau</p>
+      <h1 class="hero-title" id="hero-title"><span class="line"><span>Des toits faits</span></span><span class="line"><span>pour durer.</span></span></h1>
+      <p class="hero-sub">Couverture, réparation et entretien en ardoise, tuile et zinc. Dans le Béarn, la Bigorre et les Landes.</p>
+      <div class="hero-ctas">
+        <a class="pill pill-blue pill-lg" href="#contact">Demander un devis</a>
+        <a class="link-chev" href="#prestations">Voir les prestations</a>
+      </div>
+    </div>
+
+    <div class="hero-stage">
+      <svg class="roof" viewBox="0 40 1000 560" role="img" aria-label="Maison béarnaise couverte en ardoise, avec deux lucarnes et une cheminée">
+        <g class="walls">
+          <rect x="170" y="440" width="660" height="170" fill="#ececef"/>
+          <g fill="#7f8c84">
+            <rect x="200" y="484" width="30" height="120"/><rect x="292" y="484" width="30" height="120"/>
+            <rect x="678" y="484" width="30" height="120"/><rect x="770" y="484" width="30" height="120"/>
+          </g>
+          <g fill="#d9dfe6">
+            <rect x="234" y="484" width="54" height="120" rx="2"/>
+            <rect x="712" y="484" width="54" height="120" rx="2"/>
+          </g>
+          <path d="M261 484v120M234 530h54M739 484v120M712 530h54" stroke="#ececef" stroke-width="3"/>
+          <path d="M462 610V532a38 38 0 0 1 76 0V610Z" fill="#6b5442"/>
+          <path d="M500 494v116" stroke="#5c4738" stroke-width="2"/>
+        </g>
+        <g class="chimney">
+          <rect x="648" y="62" width="48" height="160" fill="#e2e2e5"/>
+          <rect x="642" y="52" width="60" height="13" rx="2" fill="#c8c9cd"/>
+        </g>
+        <polygon id="roof-base" points="110,440 150,400 380,100 620,100 850,400 890,440" fill="url(#p-slate)"/>
+        <g id="slates" clip-path="url(#roof-clip)"></g>
+        <g class="hips" fill="none" stroke="#5b6470" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M380 100 150 400 110 440M620 100 850 400 890 440"/>
+        </g>
+        <path class="ridge" d="M374 100H626" stroke="#8b929b" stroke-width="9" stroke-linecap="round"/>
+        <g class="dormer"><g transform="translate(400 0)">
+          <rect x="-34" y="270" width="68" height="80" fill="#efeff1"/>
+          <rect x="-22" y="284" width="44" height="60" rx="2" fill="#cdd5de"/>
+          <path d="M0 284v60M-22 312h44" stroke="#efeff1" stroke-width="3"/>
+          <path d="M-46 278 0 228l46 50z" fill="url(#p-slate)"/>
+          <path d="M-46 278 0 228l46 50" fill="none" stroke="#5b6470" stroke-width="3" stroke-linejoin="round"/>
+        </g></g>
+        <g class="dormer"><g transform="translate(600 0)">
+          <rect x="-34" y="270" width="68" height="80" fill="#efeff1"/>
+          <rect x="-22" y="284" width="44" height="60" rx="2" fill="#cdd5de"/>
+          <path d="M0 284v60M-22 312h44" stroke="#efeff1" stroke-width="3"/>
+          <path d="M-46 278 0 228l46 50z" fill="url(#p-slate)"/>
+          <path d="M-46 278 0 228l46 50" fill="none" stroke="#5b6470" stroke-width="3" stroke-linejoin="round"/>
+        </g></g>
+        <rect class="gutter" x="102" y="437" width="796" height="10" rx="5" fill="#a9afb6"/>
+      </svg>
+      <div class="callout-wrap">
+        <div class="callout">
+          <div><strong>Devis gratuit, visite sur place</strong><small>Pyrénées-Atlantiques · Hautes-Pyrénées · Landes</small></div>
+          <a class="pill pill-blue" href="#contact">Prendre rendez-vous</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="savoir-faire">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow">Nos métiers</p>
-          <h2>Deux savoir-faire, une même exigence</h2>
-        </header>
-        <div class="services">
-          <article class="service service-garden reveal">
-            <a class="service-photo" href="services/espaces-verts.html" tabindex="-1" aria-hidden="true"><figure class="photo photo-garden "><svg aria-hidden="true"><use href="#i-leaf"/></svg><figcaption>Photo à venir · jardin entretenu</figcaption></figure></a>
-            <h3>Espaces verts</h3>
-            <p>Des extérieurs soignés toute l'année, pensés pour durer et s'embellir avec les saisons.</p>
-            <ul class="ticks">
-              <li>Tonte et entretien régulier</li>
-              <li>Taille de haies et d'arbustes</li>
-              <li>Plantations et massifs</li>
-              <li>Débroussaillage, remise en état</li>
-            </ul>
-            <a class="link" href="services/espaces-verts.html">Découvrir les espaces verts <span aria-hidden="true">→</span></a>
-          </article>
-          <article class="service service-roof reveal">
-            <a class="service-photo" href="services/toitures.html" tabindex="-1" aria-hidden="true"><figure class="photo photo-roof "><svg aria-hidden="true"><use href="#i-roof"/></svg><figcaption>Photo à venir · toiture rénovée</figcaption></figure></a>
-            <h3>Toiture</h3>
-            <p>Une toiture saine et entretenue pour protéger durablement votre maison.</p>
-            <ul class="ticks">
-              <li>Réparation de fuites et de tuiles</li>
-              <li>Rénovation de couverture</li>
-              <li>Nettoyage et démoussage</li>
-              <li>Zinguerie et gouttières</li>
-            </ul>
-            <a class="link" href="services/toitures.html">Découvrir la toiture <span aria-hidden="true">→</span></a>
-          </article>
-        </div>
-      </div>
-    </section>
+  <!-- ===== Manifeste ===== -->
+  <section class="statement" id="approche" aria-label="Notre approche">
+    <div class="wrap">
+      <p class="statement-text" data-words>Un toit protège tout ce qui se trouve dessous. Nous commençons toujours par monter voir, puis nous expliquons clairement ce qui doit être fait, et ce qui peut attendre.</p>
+      <a class="link-chev" href="#approche">Découvrir l'entreprise</a>
+    </div>
+  </section>
 
-    <section class="section section-tint" id="realisations">
-      <div class="container">
-        <header class="section-head section-head-row reveal">
-          <div>
-            <p class="eyebrow">Réalisations</p>
-            <h2>Le travail parle de lui-même</h2>
+  <!-- ===== Prestations ===== -->
+  <section class="highlights" id="prestations" aria-labelledby="prest-title">
+    <div class="wrap hl-head">
+      <h2 class="section-title" id="prest-title">Prestations.</h2>
+      <a class="link-chev" href="#prestations">Tous les services</a>
+    </div>
+    <div class="hl-viewport">
+      <ul class="hl-track">
+        <li class="card">
+          <div class="card-text">
+            <p class="card-kicker">Couverture</p>
+            <h3 class="card-title">Réfection complète, ardoise ou tuile.</h3>
+            <p class="card-copy">Dépose, contrôle de la charpente, écran sous-toiture, liteaux neufs et pose de la couverture.</p>
+            <a class="link-chev" href="#prestations">En savoir plus</a>
           </div>
-          <div class="filters" role="group" aria-label="Filtrer les réalisations">
-            <button class="chip" type="button" data-filter="all" aria-pressed="true">Tout</button>
-            <button class="chip" type="button" data-filter="garden" aria-pressed="false">Espaces verts</button>
-            <button class="chip" type="button" data-filter="roof" aria-pressed="false">Toiture</button>
+          <div class="card-media">
+            <svg viewBox="0 0 400 250" aria-hidden="true">
+              <polygon points="40,250 72,220 150,66 250,66 328,220 360,250" fill="url(#p-slate)"/>
+              <path d="M150 66 72 220 40 250M250 66 328 220 360 250" fill="none" stroke="#5b6470" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M146 66h108" stroke="#8b929b" stroke-width="6" stroke-linecap="round"/>
+            </svg>
           </div>
-        </header>
-        <div class="gallery"><figure class="photo photo-garden reveal" data-cat="garden"><svg aria-hidden="true"><use href="#i-leaf"/></svg><figcaption>Photo à venir · espaces verts</figcaption></figure><figure class="photo photo-roof reveal" data-cat="roof"><svg aria-hidden="true"><use href="#i-roof"/></svg><figcaption>Photo à venir · toiture</figcaption></figure><figure class="photo photo-garden reveal" data-cat="garden"><svg aria-hidden="true"><use href="#i-leaf"/></svg><figcaption>Photo à venir · espaces verts</figcaption></figure><figure class="photo photo-roof reveal" data-cat="roof"><svg aria-hidden="true"><use href="#i-roof"/></svg><figcaption>Photo à venir · toiture</figcaption></figure><figure class="photo photo-garden reveal" data-cat="garden"><svg aria-hidden="true"><use href="#i-leaf"/></svg><figcaption>Photo à venir · espaces verts</figcaption></figure><figure class="photo photo-roof reveal" data-cat="roof"><svg aria-hidden="true"><use href="#i-roof"/></svg><figcaption>Photo à venir · toiture</figcaption></figure></div>
+        </li>
+        <li class="card">
+          <div class="card-text">
+            <p class="card-kicker">Réparation <span class="status">Urgence fuite</span></p>
+            <h3 class="card-title">Une fuite ? On trouve, on répare.</h3>
+            <p class="card-copy">Ardoises cassées, tuiles glissées, faîtage abîmé. Bâchage provisoire si la pluie menace.</p>
+            <a class="link-chev" href="#prestations">En savoir plus</a>
+          </div>
+          <div class="card-media">
+            <svg viewBox="0 0 400 250" aria-hidden="true">
+              <rect width="400" height="250" fill="url(#p-slate-l)"/>
+              <rect x="174.6" y="144" width="54" height="32.4" fill="#1b1f24"/>
+              <rect x="170" y="152" width="64" height="6" fill="#b98a58"/>
+              <rect class="lift" x="174.6" y="144" width="54" height="32.4" rx="3.6" fill="#6c7784"/>
+            </svg>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-text">
+            <p class="card-kicker">Entretien</p>
+            <h3 class="card-title">Démoussage et traitement hydrofuge.</h3>
+            <p class="card-copy">Nettoyage adapté au matériau, traitement anti-mousse, puis protection hydrofuge de la couverture.</p>
+            <a class="link-chev" href="#prestations">En savoir plus</a>
+          </div>
+          <div class="card-media ba">
+            <svg viewBox="0 0 400 250" aria-hidden="true">
+              <rect width="400" height="250" fill="url(#p-tile-l)"/>
+              <rect width="400" height="250" fill="#3f4c1b" opacity=".28"/>
+              <rect width="400" height="250" fill="url(#p-moss)"/>
+            </svg>
+            <div class="ba-after">
+              <svg viewBox="0 0 400 250" aria-hidden="true"><rect width="400" height="250" fill="url(#p-tile-l)"/></svg>
+            </div>
+            <span class="ba-line" aria-hidden="true"></span>
+            <span class="ba-tag before">Avant</span><span class="ba-tag after">Après</span>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-text">
+            <p class="card-kicker">Zinguerie</p>
+            <h3 class="card-title">Gouttières, chéneaux et noues.</h3>
+            <p class="card-copy">Façonnage et pose en zinc, remplacement des descentes, abergements de cheminée.</p>
+            <a class="link-chev" href="#prestations">En savoir plus</a>
+          </div>
+          <div class="card-media">
+            <svg viewBox="0 0 400 250" aria-hidden="true">
+              <rect width="400" height="146" fill="url(#p-zinc-l)"/>
+              <rect y="146" width="400" height="104" fill="#ececef"/>
+              <rect y="140" width="400" height="10" fill="#8f959d"/>
+              <rect x="-10" y="148" width="420" height="30" rx="15" fill="#a7adb5"/>
+              <rect x="-10" y="154" width="420" height="4" fill="#cfd3d8"/>
+              <rect x="300" y="176" width="24" height="80" fill="#9aa0a8"/>
+              <rect x="304" y="176" width="4" height="80" fill="#c3c8ce"/>
+              <rect x="295" y="172" width="34" height="12" rx="3" fill="#8f959d"/>
+            </svg>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-text">
+            <p class="card-kicker">Fenêtres de toit</p>
+            <h3 class="card-title">Plus de lumière sous les combles.</h3>
+            <p class="card-copy">Pose et remplacement de fenêtres de toit, raccords d'étanchéité et finitions compris.</p>
+            <a class="link-chev" href="#prestations">En savoir plus</a>
+          </div>
+          <div class="card-media">
+            <svg viewBox="0 0 400 250" aria-hidden="true">
+              <rect width="400" height="250" fill="url(#p-slate-l)"/>
+              <rect x="122" y="34" width="156" height="196" rx="6" fill="#9aa0a8"/>
+              <rect x="130" y="42" width="140" height="180" rx="4" fill="#3a3f46"/>
+              <rect x="142" y="54" width="116" height="156" rx="2" fill="#c9d8e5"/>
+              <polygon points="142,150 220,54 246,54 142,182" fill="#dfe9f2"/>
+            </svg>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-text">
+            <p class="card-kicker">Isolation</p>
+            <h3 class="card-title">Isoler en refaisant le toit.</h3>
+            <p class="card-copy">Isolation des rampants ou des combles, à prévoir au moment de la réfection de couverture.</p>
+            <a class="link-chev" href="#prestations">En savoir plus</a>
+          </div>
+          <div class="card-media">
+            <svg viewBox="0 0 400 250" aria-hidden="true">
+              <rect y="30" width="400" height="30" fill="url(#p-slate)"/>
+              <g fill="#c9985f"><rect x="0" y="62" width="400" height="8"/></g>
+              <rect y="72" width="400" height="6" fill="#6d7f92"/>
+              <rect y="78" width="400" height="172" fill="#ebdeae"/>
+              <path d="M0 110q25-14 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0M0 150q25-14 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0M0 190q25-14 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0M0 230q25-14 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0" fill="none" stroke="#d8c584" stroke-width="2"/>
+              <g fill="#c49a6c"><rect x="30" y="78" width="26" height="172"/><rect x="187" y="78" width="26" height="172"/><rect x="344" y="78" width="26" height="172"/></g>
+              <g fill="#b3895c"><rect x="30" y="78" width="4" height="172"/><rect x="187" y="78" width="4" height="172"/><rect x="344" y="78" width="4" height="172"/></g>
+            </svg>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="hl-controls">
+      <div class="dots" aria-label="Choisir une prestation">
+        <button class="dot is-active" type="button" aria-label="Couverture"></button>
+        <button class="dot" type="button" aria-label="Réparation"></button>
+        <button class="dot" type="button" aria-label="Entretien"></button>
+        <button class="dot" type="button" aria-label="Zinguerie"></button>
+        <button class="dot" type="button" aria-label="Fenêtres de toit"></button>
+        <button class="dot" type="button" aria-label="Isolation"></button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="deroulement">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow">Déroulement</p>
-          <h2>De votre appel à la fin du chantier</h2>
-        </header>
-        <ol class="steps">
-          <li class="reveal"><span class="step-num">1</span><h3>Premier contact</h3><p>Vous nous décrivez votre besoin par téléphone ou via le formulaire.</p></li>
-          <li class="reveal"><span class="step-num">2</span><h3>Visite sur place</h3><p>Nous venons voir le jardin ou la toiture pour évaluer les travaux.</p></li>
-          <li class="reveal"><span class="step-num">3</span><h3>Devis détaillé</h3><p>Vous recevez un chiffrage clair, poste par poste, avant de vous engager.</p></li>
-          <li class="reveal"><span class="step-num">4</span><h3>Réalisation</h3><p>Les travaux sont réalisés avec soin, chantier laissé propre.</p></li>
+  <!-- ===== Anatomie ===== -->
+  <section class="anatomy" id="anatomie" aria-labelledby="anat-title">
+    <div class="wrap anat-grid">
+      <div class="anat-head">
+        <p class="kicker-sm">Anatomie d'une toiture</p>
+        <h2 class="section-title" id="anat-title">Ce qu'il y a sous vos ardoises.</h2>
+        <p class="lead">Une couverture est un ensemble. Nous contrôlons chaque couche, pas seulement celle que l'on voit depuis la rue.</p>
+        <ol class="anat-labels">
+          <li><span class="sw tx-ardoise"></span><div><strong>Couverture</strong><span>Ardoises posées au crochet ou au clou, tuiles calées et fixées selon la pente.</span></div></li>
+          <li><span class="sw tx-liteaux"></span><div><strong>Liteaux et contre-liteaux</strong><span>Ils portent la couverture et ménagent une lame d'air ventilée.</span></div></li>
+          <li><span class="sw tx-ecran"></span><div><strong>Écran sous-toiture</strong><span>Membrane étanche à l'eau, perméable à la vapeur.</span></div></li>
+          <li><span class="sw tx-charpente"></span><div><strong>Charpente</strong><span>Chevrons vérifiés, renforcés ou remplacés s'il le faut.</span></div></li>
         </ol>
       </div>
-    </section>
-
-    <section class="section section-tint" id="zone">
-      <div class="container about">
-        <figure class="photo photo-garden about-photo reveal"><svg aria-hidden="true"><use href="#i-team"/></svg><figcaption>Photo à venir · l&#39;équipe sur un chantier</figcaption></figure>
-        <div class="reveal">
-          <p class="eyebrow">Une entreprise locale</p>
-          <h2>Basés à Pau, <em>au plus près de chez vous</em></h2>
-          <p class="about-text">RF Rénovation se déplace dans trois départements. Vous échangez avec la même personne du premier appel à la fin du chantier.</p>
-          <ul class="zone-list">
-            <li><span>64</span>Pyrénées-Atlantiques</li>
-            <li><span>65</span>Hautes-Pyrénées</li>
-            <li><span>40</span>Landes</li>
-          </ul>
-          <p class="towns">Nous intervenons notamment à Pau, Lescar, Billère, Lons, Orthez, Oloron-Sainte-Marie, Tarbes, Lourdes, Mont-de-Marsan et Aire-sur-l'Adour. Votre commune n'est pas citée ? Appelez-nous pour le vérifier.</p>
+      <div class="anat-stage" aria-hidden="true">
+        <div class="stack">
+          <div class="stack-inner">
+            <div class="layer"><div class="plane tx-charpente"></div></div>
+            <div class="layer"><div class="plane tx-ecran"></div></div>
+            <div class="layer"><div class="plane tx-liteaux"></div></div>
+            <div class="layer"><div class="plane tx-ardoise"></div></div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="questions">
-      <div class="container faq">
-        <header class="reveal">
-          <p class="eyebrow">Questions fréquentes</p>
-          <h2>Avant de nous appeler</h2>
-        </header>
-        <div class="faq-list reveal">
-          <details class="faq-item"><summary>Intervenez-vous dans ma commune ?</summary><p>Nous sommes basés à Pau et nous nous déplaçons dans les Pyrénées-Atlantiques, les Hautes-Pyrénées et les Landes. En cas de doute, un appel suffit pour le vérifier.</p></details>
-          <details class="faq-item"><summary>Puis-je vous confier à la fois le jardin et la toiture ?</summary><p>Oui, ce sont nos deux métiers. Vous gardez le même interlocuteur pour les deux, avec un devis par chantier.</p></details>
-          <details class="faq-item"><summary>Comment se passe un devis ?</summary><p>Vous nous décrivez votre besoin, nous venons voir sur place, puis vous recevez un devis détaillé poste par poste. Vous décidez ensuite.</p></details>
-          <details class="faq-item"><summary>Quel est le moyen le plus rapide de vous joindre ?</summary><p>Le téléphone, au 05 00 00 00 00. Vous pouvez aussi remplir le formulaire ci-dessous, nous vous rappelons.</p></details>
-        </div>
+  <!-- ===== Matériaux ===== -->
+  <section class="materials" id="materiaux" aria-labelledby="mat-title">
+    <div class="wrap">
+      <h2 class="section-title" id="mat-title">Ardoise, tuile, zinc.</h2>
+    </div>
+
+    <article class="wrap mat">
+      <div class="mat-text">
+        <p class="kicker-sm">Ardoise naturelle</p>
+        <h3 class="mat-title">Le toit béarnais, dans les règles.</h3>
+        <p>Les toits pentus du Béarn et de la Bigorre sont souvent couverts d'ardoise. Nous la posons, la remplaçons et la réparons, avec un soin particulier pour les coyaux, les noues et les arêtiers.</p>
+        <a class="link-chev" href="#prestations">Couverture en ardoise</a>
       </div>
-    </section>
+      <div class="mat-media">
+        <svg class="mat-svg" viewBox="0 0 800 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="800" height="640" fill="url(#p-slate-xl)"/></svg>
+        <span class="mat-tag">Ardoise posée au crochet</span>
+      </div>
+    </article>
 
-    <section class="contact-band" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-text">
-          <p class="eyebrow">Devis</p>
-          <h2>Parlons de votre projet</h2>
-          <p>Décrivez-nous vos travaux, nous vous rappelons pour convenir d'une visite.</p>
-          <a class="contact-tel" href="tel:+33500000000">05 00 00 00 00</a>
-          <p class="contact-zone">Pau · 64 · 65 · 40</p>
-        </div>
-        <form class="contact-form" id="devis-form" novalidate>
-          <div class="field"><label for="f-nom">Nom</label><input id="f-nom" name="nom" type="text" autocomplete="name" required></div>
-          <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" required></div>
-          <div class="field"><label for="f-commune">Commune</label><input id="f-commune" name="commune" type="text" autocomplete="address-level2" placeholder="Ex. Pau, Tarbes, Aire-sur-l'Adour"></div>
-          <div class="field"><label for="f-email">E-mail <span class="optional">(facultatif)</span></label><input id="f-email" name="email" type="email" autocomplete="email"></div>
-          <div class="field field-full"><label for="f-type">Type de travaux</label>
+    <article class="wrap mat">
+      <div class="mat-text">
+        <p class="kicker-sm">Terre cuite</p>
+        <h3 class="mat-title">La tuile, canal, plate ou mécanique.</h3>
+        <p>Remaniement, remplacement des tuiles cassées, reprise des faîtages et réfection complète des couvertures en terre cuite, fréquentes dans la plaine et dans les Landes.</p>
+        <a class="link-chev" href="#prestations">Couverture en tuile</a>
+      </div>
+      <div class="mat-media">
+        <svg class="mat-svg" viewBox="0 0 800 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="800" height="640" fill="url(#p-tile-xl)"/></svg>
+        <span class="mat-tag">Tuile canal</span>
+      </div>
+    </article>
+
+    <article class="wrap mat">
+      <div class="mat-text">
+        <p class="kicker-sm">Zinguerie</p>
+        <h3 class="mat-title">Là où l'eau doit s'en aller.</h3>
+        <p>Gouttières, descentes, chéneaux, noues et abergements. Une zinguerie bien faite protège les murs, les rives et la charpente, bien au-delà de la toiture.</p>
+        <a class="link-chev" href="#prestations">Travaux de zinguerie</a>
+      </div>
+      <div class="mat-media">
+        <svg class="mat-svg" viewBox="0 0 800 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="800" height="640" fill="url(#p-zinc-xl)"/></svg>
+        <span class="mat-tag">Zinc à joint debout</span>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===== Méthode ===== -->
+  <section class="process" id="methode" aria-labelledby="proc-title">
+    <div class="wrap">
+      <h2 class="section-title" id="proc-title">De la visite à la réception.</h2>
+      <p class="lead">Quatre étapes, toujours dans le même ordre.</p>
+      <div class="proc-line" aria-hidden="true"><span></span></div>
+      <ol class="steps">
+        <li class="step"><span class="step-n">Étape 1</span><h3>Visite et diagnostic</h3><p>Nous montons voir l'état de la couverture, des liteaux et de la zinguerie, photos à l'appui.</p></li>
+        <li class="step"><span class="step-n">Étape 2</span><h3>Devis détaillé</h3><p>Un chiffrage poste par poste, matériaux indiqués. Gratuit et sans engagement.</p></li>
+        <li class="step"><span class="step-n">Étape 3</span><h3>Chantier sécurisé</h3><p>Échafaudage ou nacelle, bâchage en cas de pluie, protection des abords et des jardins.</p></li>
+        <li class="step"><span class="step-n">Étape 4</span><h3>Réception et nettoyage</h3><p>Visite de fin de chantier avec vous. Gravats évacués, gouttières vidées.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== Zone ===== -->
+  <section class="zone" id="zone" aria-labelledby="zone-title">
+    <div class="wrap">
+      <h2 class="section-title" id="zone-title">Pau, et tout autour.</h2>
+      <p class="lead">Basés à Pau, nous intervenons dans trois départements.</p>
+      <div class="depts">
+        <div class="dept"><span class="dept-n"><span>64</span></span><span class="dept-name">Pyrénées-Atlantiques</span><span class="dept-towns">Pau, Béarn, Oloron, Orthez</span></div>
+        <div class="dept"><span class="dept-n"><span>65</span></span><span class="dept-name">Hautes-Pyrénées</span><span class="dept-towns">Tarbes, Lourdes, Bigorre</span></div>
+        <div class="dept"><span class="dept-n"><span>40</span></span><span class="dept-name">Landes</span><span class="dept-towns">Sud des Landes, Aire-sur-l'Adour</span></div>
+      </div>
+      <ul class="communes" aria-label="Communes desservies">
+        <li>Pau</li><li>Lescar</li><li>Lons</li><li>Billère</li><li>Jurançon</li><li>Gan</li><li>Nay</li><li>Morlaàs</li><li>Serres-Castet</li><li>Oloron-Sainte-Marie</li><li>Orthez</li><li>Tarbes</li><li>Lourdes</li><li>Aire-sur-l'Adour</li>
+      </ul>
+      <p class="zone-note">Votre commune n'est pas dans la liste ? <a href="tel:+33500000000">Appelez-nous</a>, nous vous dirons si nous pouvons intervenir.</p>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <p class="kicker-sm">Contact</p>
+        <h2 class="section-title" id="contact-title">Parlons de votre toit.</h2>
+        <p class="lead">Décrivez votre projet ou le problème constaté. Nous vous rappelons pour convenir d'une visite.</p>
+        <dl class="coords">
+          <div><dt>Téléphone</dt><dd><a href="tel:+33500000000">05 00 00 00 00</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:contact@rf-renovation.fr">contact@rf-renovation.fr</a></dd></div>
+          <div><dt>Adresse</dt><dd>Pau (64000)</dd></div>
+          <div><dt>Horaires</dt><dd>Lundi au vendredi, 8 h – 18 h</dd></div>
+        </dl>
+      </div>
+
+      <form class="form" id="devis-form" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="f-nom">Nom *</label><input id="f-nom" name="nom" type="text" autocomplete="name" required><p class="err" id="e-nom"></p></div>
+          <div class="field"><label for="f-commune">Commune</label><input id="f-commune" name="commune" type="text" autocomplete="address-level2"></div>
+          <div class="field"><label for="f-tel">Téléphone *</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel"><p class="err" id="e-tel"></p></div>
+          <div class="field"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" autocomplete="email"><p class="err" id="e-email"></p></div>
+          <div class="field full"><label for="f-type">Type de travaux *</label>
             <select id="f-type" name="type" required>
               <option value="">Choisir…</option>
-              <option value="espaces-verts">Espaces verts</option>
-              <option value="toiture">Toiture</option>
-              <option value="les-deux">Les deux</option>
-            </select></div>
-          <div class="field field-full"><label for="f-msg">Votre projet <span class="optional">(facultatif)</span></label><textarea id="f-msg" name="message" rows="4" placeholder="Ex. haie de 20 m à tailler, fuite au niveau de la cheminée…"></textarea></div>
-          <button class="btn btn-primary field-full" type="submit">Envoyer ma demande</button>
-          <p class="form-note field-full">Vos coordonnées servent uniquement à vous recontacter au sujet de votre demande.</p>
-          <p class="form-status field-full" id="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
+              <option value="couverture">Couverture neuve ou réfection</option>
+              <option value="reparation">Réparation, fuite</option>
+              <option value="entretien">Démoussage et traitement</option>
+              <option value="zinguerie">Zinguerie</option>
+              <option value="fenetre-de-toit">Fenêtre de toit</option>
+              <option value="isolation">Isolation</option>
+              <option value="autre">Autre</option>
+            </select><p class="err" id="e-type"></p></div>
+          <div class="field full"><label for="f-message">Votre message *</label><textarea id="f-message" name="message" rows="5" placeholder="Type de toit, surface approximative, problème constaté…"></textarea><p class="err" id="e-message"></p></div>
+        </div>
+        <div class="form-foot">
+          <p>* Champs obligatoires</p>
+          <button class="pill pill-blue pill-lg" type="submit">Envoyer la demande</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <p class="footer-logo">RF Rénovation</p>
-        <p>Espaces verts et toiture.<br>Basé à Pau.</p>
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">RF Rénovation</a>
+        <p class="foot-about">Couvreur à Pau. Couverture, réparation, zinguerie et entretien de toitures dans les Pyrénées-Atlantiques, les Hautes-Pyrénées et les Landes.</p>
       </div>
       <div>
-        <p class="footer-title">Le site</p>
+        <h4>Prestations</h4>
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="services/espaces-verts.html">Espaces verts</a></li>
-          <li><a href="services/toitures.html">Toitures</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#prestations">Couverture</a></li>
+          <li><a href="#prestations">Réparation</a></li>
+          <li><a href="#prestations">Démoussage</a></li>
+          <li><a href="#prestations">Zinguerie</a></li>
         </ul>
       </div>
       <div>
-        <p class="footer-title">Zone d'intervention</p>
+        <h4>Entreprise</h4>
         <ul>
-          <li>Pyrénées-Atlantiques (64)</li>
-          <li>Hautes-Pyrénées (65)</li>
-          <li>Landes (40)</li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-title">Contact</p>
-        <ul>
-          <li><a href="tel:+33500000000">05 00 00 00 00</a></li>
+          <li><a href="#approche">À propos</a></li>
+          <li><a href="#zone">Zone d'intervention</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+33500000000">05 00 00 00 00</a></li>
+          <li><a href="mailto:contact@rf-renovation.fr">contact@rf-renovation.fr</a></li>
+          <li>Pau (64000)</li>
+        </ul>
+      </div>
     </div>
-  </footer>
-  <div class="mobile-bar">
-    <a href="tel:+33500000000">Appeler</a>
-    <a href="#contact" class="mb-primary">Demander un devis</a>
+    <div class="foot-bottom">
+      <p>© 2026 RF Rénovation. Tous droits réservés.</p>
+      <p><a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
   </div>
-  <script src="js/main.js"></script>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/accueil.js"></script>
 </body>
 </html>
