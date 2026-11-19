@@ -94,7 +94,7 @@ section[id]{scroll-margin-top:var(--gnav-h)}
 }
 .gnav.is-stuck{border-bottom-color:var(--hairline)}
 .gnav-in{height:100%;display:flex;align-items:center;gap:28px}
-.brand{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font:600 14px/1 var(--font-text);letter-spacing:-0.01em;text-decoration:none !important}
+.brand{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;color:var(--ink);font:600 14px/1 var(--font-text);letter-spacing:-0.01em;text-decoration:none !important}
 .brand svg{width:20px;height:20px}
 .gnav-links{display:flex;gap:32px;margin-left:auto}
 .gnav-call{display:none;flex:none;width:32px;height:32px;border-radius:50%;align-items:center;justify-content:center;color:var(--ink);box-shadow:inset 0 0 0 1px var(--steel)}
@@ -352,6 +352,11 @@ section[id]{scroll-margin-top:var(--gnav-h)}
 .todo{color:var(--orange)}
 .section .communes li{background:var(--mist)}
 
+/* Écran tactile : effets de survol déclenchés quand la carte est visible (js/site.js) */
+.card.is-live .lift{transform:none}
+.card.is-live .ba-after{clip-path:inset(0 0 0 14%)}
+.card.is-live .ba-line{left:14%}
+
 /* ---------- Responsive ---------- */
 @media (max-width:1000px){
   .lnav-links{display:none}
@@ -364,7 +369,6 @@ section[id]{scroll-margin-top:var(--gnav-h)}
   .brand{margin-right:auto}
   .gnav-call,.burger{display:inline-flex}
   .hero-stage{padding-left:0;padding-right:0;overflow:hidden}
-  .roof{width:150%;margin-left:-25%}
   .callout-wrap{position:static;padding:4px var(--gr) 0 var(--gl);margin-top:-6px}
   .callout{gap:14px;padding:10px 10px 10px 20px}
   .anat-grid,.mat,.contact-grid{grid-template-columns:minmax(0,1fr)}
@@ -374,28 +378,55 @@ section[id]{scroll-margin-top:var(--gnav-h)}
   .anat-stage{order:-1}
   .anat-labels{margin-top:28px}
   .mat{gap:32px}
-  .mat-media{margin-right:calc(-1 * var(--gr));aspect-ratio:4/3}
+  .mat-media{margin-right:calc(-1 * var(--gr));aspect-ratio:16/10}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px}
-  .depts{grid-template-columns:minmax(0,1fr)}
-  .dept{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:0 22px;padding:22px 24px}
-  .dept-n{font-size:64px;grid-row:span 2}
-  .dept-name{margin-top:0}
   .contact-grid{gap:44px}
-  .frame{aspect-ratio:4/3}
-  .tiles,.tiles-2{grid-template-columns:minmax(0,1fr)}
+  /* Zones tactiles confortables */
+  .gnav .pill{min-height:38px;padding-inline:15px}
+  .gnav-call{width:38px;height:38px}
+  .burger{width:44px;height:44px}
+  .brand{padding-block:10px}
+  .link-chev{padding-block:9px}
+  .callout .pill{min-height:36px}
+  .dots{gap:0;padding:4px 8px}
+  .dot{width:32px;height:32px}
+  .footer ul{gap:0}
+  .footer li a{display:block;padding-block:8px}
+  .footer li:not(:has(a)){padding-block:8px}
+  .footer h4{margin-bottom:4px}
+  .foot-bottom a{display:inline-block;padding-block:8px}
+  .frame{aspect-ratio:16/9}
+  .tiles,.tiles-2{grid-template-columns:repeat(2,minmax(0,1fr))}
   .steps-3{grid-template-columns:minmax(0,1fr)}
-  .svc-media{aspect-ratio:4/3}
+  .svc-media{aspect-ratio:16/10}
   .faq summary{font-size:17px}
   .form{padding:28px 22px}
   .foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .foot-brand{grid-column:1 / -1}
 }
+@media (max-width:600px){
+  .roof{width:150%;margin-left:-25%}
+  .depts{grid-template-columns:minmax(0,1fr)}
+  .dept{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:0 22px;padding:22px 24px}
+  .dept-n{font-size:64px;grid-row:span 2}
+  .dept-name{margin-top:0}
+}
 @media (max-width:460px){
+  .frame,.mat-media,.svc-media{aspect-ratio:4/3}
+  .tiles,.tiles-2{grid-template-columns:minmax(0,1fr)}
+  .hero-title,.phero .hero-title{font-size:clamp(32px,10.6vw,44px)}
+  .statement-text{font-size:24px;line-height:1.17}
+  .section-title{font-size:clamp(28px,8.6vw,34px)}
+  .foot-grid>div:last-child{grid-column:1 / -1}
   .lnav-title{font-size:17px}
   .form-grid{grid-template-columns:minmax(0,1fr)}
   .steps{grid-template-columns:minmax(0,1fr)}
   .callout{flex-wrap:wrap;justify-content:space-between;border-radius:22px}
   .coords>div{grid-template-columns:minmax(0,1fr);gap:2px}
+}
+@media (max-width:374px){
+  .gnav .brand svg,.pill-more{display:none}
+  .gnav-in{gap:8px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}

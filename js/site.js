@@ -117,6 +117,12 @@
     }));
   }
 
+  /* Écran tactile : pas de survol, les cartes s'animent quand elles sont bien visibles */
+  if (cards.length && window.matchMedia('(hover: none)').matches && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => e.target.classList.toggle('is-live', e.isIntersecting)), { threshold: .6 });
+    cards.forEach((c) => io.observe(c));
+  }
+
   /* ---------- Comparateur avant / après (curseur) ---------- */
   const setCut = (ba, v) => { ba.style.setProperty('--cut', v + '%'); };
   $$('.ba-range').forEach((ba) => {
@@ -208,7 +214,8 @@
   };
 
   const mm = gsap.matchMedia();
-  mm.add('(min-width: 821px)', () => {
+  // Épinglages seulement sur grand écran assez haut (pas sur un téléphone à l'horizontale)
+  mm.add('(min-width: 821px) and (min-height: 700px)', () => {
     if (vp) {
       // Prestations : défilement horizontal épinglé
       const track = $('.hl-track');
@@ -226,7 +233,7 @@
     }
     return () => { if (vp) vp.classList.remove('is-pinned'); pinnedST = null; };
   });
-  mm.add('(max-width: 820px)', () => {
+  mm.add('(max-width: 820px), (max-height: 699px)', () => {
     rise('.card', '.hl-track');
     if (has('.anatomy')) ScrollTrigger.create({ trigger: '.stack', start: 'top 90%', end: 'bottom 40%', scrub: .6, animation: anatomyTl() });
   });
